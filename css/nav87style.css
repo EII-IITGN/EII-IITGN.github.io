@@ -1,0 +1,53 @@
+
+
+
+@media (max-width: 768px) {
+
+    .nav87 {
+        position: fixed;
+        /* top: 10vh; */
+        display: block;
+        width: 100vw !important;
+        height: 100vh !important;
+        padding-right: 2ch;
+        text-align: right;
+        background-color: #000;
+    }
+
+    .nav87UL {
+        /* display: block !important; */
+        /* text-align: right; */
+        /* height: 100vh !important; */
+        background: transparent !important;
+        /* line-height: 2rem !important; */
+    }
+
+    .nav87UL li {
+        display: block !important;
+        /* width: 100vw !important; */
+        /* height: 100vh !important; */
+    }
+
+    .nav87UL li a {
+        font-size: 2rem !important;
+        /* line-height: 2rem !important; */
+        padding: 1rem !important;
+    }
+
+    .nav87active {
+        right: 0;
+        transition: right 0.5s ease-in-out;
+        
+    }
+    
+    .nav87inactive {
+        /* right: -100vw; */
+        transition: right 0.5s ease-in-out;
+        right: -200vw;
+    }
+
+    .active a {
+        font-weight: bold !important;
+        }
+    
+}
