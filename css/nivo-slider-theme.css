@@ -157,7 +157,7 @@ Supports Thumbs: true
 
 @media (max-width: 767px) {
   .nivo-directionNav {
-    display: none;
+  /*  display: none;*/
   }
   .slider-content {
     padding: 46px 0px;
