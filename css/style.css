@@ -857,6 +857,9 @@ div#preloader {
   font-size: 20px;
 }
 
+.icons a i:hover{
+  
+}
 .our-team {
   display: relative;
   flex-wrap: wrap;
@@ -1733,17 +1736,15 @@ div#preloader {
 /*  15. Footer Area
 /*----------------------------------------*/
 
-/* .footer-area {
+.footer-area {
   width: 100%;
   padding: 40px 0;
   background: #f9f9f9 none repeat scroll 0 0;
   box-sizing: border-box;
-<<<<<<< HEAD
->>>>>>> c4e5b6dbb39c3d8670ab3b804214e57029449504
-} */
-=======
-}
->>>>>>> 81190c403cc3205d1d27c260ce909207e5881e3d
+} 
+/* <<<<<<< HEAD
+>>>>>>> c4e5b6dbb39c3d8670ab3b804214e57029449504 */
+
 
 .footer-head p {
   color: rgb(0, 0, 0);
