@@ -150,7 +150,7 @@ a {
 }
 
 a:hover {
-  color: #3EC1D5;
+  color: #ddd;
   text-decoration: none;
 }
 
@@ -172,14 +172,16 @@ body {
 .back-to-top {
   position: fixed;
   display: none;
-  background: #3EC1D5;
+  background: #222;
   color: #fff;
   padding: 6px 12px 9px 12px;
   font-size: 16px;
   border-radius: 2px;
   right: 15px;
   bottom: 15px;
-  transition: background 0.5s;
+  transition: background 0.25s;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
@@ -189,13 +191,13 @@ body {
 }
 
 .back-to-top:focus {
-  background: #3EC1D5;
+  background: #1d4e95;
   color: #fff;
   outline: none;
 }
 
 .back-to-top:hover {
-  background: #3cd6ed;
+  background: #1d4e95;
   color: #fff;
 }
 
@@ -226,17 +228,17 @@ div#preloader {
 }
 
 ::-moz-selection {
-  background: #3EC1D5;
+  background: #ddd;
   text-shadow: none;
 }
 
 ::selection {
-  background: #3EC1D5;
+  background: #ddd;
   text-shadow: none;
 }
 
 ::selection {
-  background: #3EC1D5;
+  background: #ddd;
   text-shadow: none;
 }
 
@@ -357,7 +359,7 @@ div#preloader {
 }
 
 .main-menu ul.navbar-nav li a:hover {
-  color: #3EC1D5;
+  color: #ddd;
 }
 
 .navbar {
@@ -449,7 +451,7 @@ div#preloader {
 }
 
 .sticky-logo h1 span {
-  color: #3ec1d5;
+  color: #ddd;
 }
 .stick .main-menu ul.navbar-nav li.active a::after {
   border: 1px solid #fff;
@@ -531,7 +533,7 @@ div#preloader {
 }
 
 .single-well ul li i {
-  color: #3EC1D5;
+  color: #ddd;
   padding-right: 10px;
   font-size: 12px;
 }
@@ -566,7 +568,7 @@ div#preloader {
 }
 
 .services-details:hover h4, .services-details:hover .services-icon {
-  color: #3EC1D5;
+  color: #ddd;
 }
 
 .row.second-row {
@@ -666,7 +668,7 @@ div#preloader {
 }
 
 .faq-details h4.check-title a.active, .faq-details a.active span.acc-icons::before {
-  color: #3EC1D5;
+  color: #ddd;
 }
 
 .faq-details a.active span.acc-icons::before {
@@ -732,7 +734,7 @@ div#preloader {
 
 .tab-menu ul li.active a, .tab-menu ul li.hover a, .tab-menu ul li.focus a {
   border-bottom: 1px solid #fff;
-  color: #3EC1D5 !important;
+  color: #ddd !important;
 }
 
 .tab-menu .nav-tabs {
@@ -828,7 +830,7 @@ div#preloader {
 }
 
 .suscribe-input button {
-  background: #3ec1d5 none repeat scroll 0 0;
+  background: #ddd none repeat scroll 0 0;
   border: medium none;
   border-radius: 0 20px 20px 0;
   color: #fff;
@@ -841,7 +843,7 @@ div#preloader {
 
 .suscribe-input button:hover {
   background: #fff none repeat scroll 0 0;
-  color: #3ec1d5;
+  color: #ddd;
 }
 
 /*----------------------------------------
@@ -1012,7 +1014,7 @@ div#preloader {
 }
 
 .work-left-text {
-  background: #3EC1D5 none repeat scroll 0 0;
+  background: #ddd none repeat scroll 0 0;
 }
 
 .work-left-text {
@@ -1094,8 +1096,8 @@ div#preloader {
 }
 
 .project-menu li a.active, .project-menu li a:hover {
-  border-color: #3EC1D5;
-  background: #3EC1D5;
+  border-color: #ddd;
+  background: #ddd;
   color: #fff;
   text-decoration: none;
 }
@@ -1264,7 +1266,7 @@ div#preloader {
   position: absolute;
   right: 50px;
   top: 12px;
-  color: #3EC1D5;
+  color: #ddd;
 }
 
 .pri_table_list button {
@@ -1301,7 +1303,7 @@ div#preloader {
 }
 
 .saleon {
-  background: #3EC1D5 none repeat scroll 0 0;
+  background: #ddd none repeat scroll 0 0;
   color: #fff;
   font-size: 13px;
   font-weight: 700;
@@ -1330,8 +1332,8 @@ div#preloader {
 }
 
 .active>button {
-  background: #3EC1D5 none repeat scroll 0 0;
-  border: 1px solid #3EC1D5;
+  background: #ddd none repeat scroll 0 0;
+  border: 1px solid #ddd;
   color: #fff;
   transition: 0.4s;
 }
@@ -1439,7 +1441,7 @@ div#preloader {
 }
 
 .testimonial-carousel.owl-carousel.owl-theme .owl-controls .owl-dots div.owl-dot.active span {
-  background: #3EC1D5;
+  background: #ddd;
 }
 
 .testi-text.text-center>h6 {
@@ -1455,7 +1457,7 @@ div#preloader {
 }
 
 .guest-rev>a {
-  color: #3EC1D5;
+  color: #ddd;
   font-size: 14px;
 }
 
@@ -1568,7 +1570,7 @@ div#preloader {
 }
 
 .single-blog .ready-btn:hover {
-  border: 1px solid #3EC1D5;
+  border: 1px solid #ddd;
   color: #fff;
 }
 
@@ -1577,7 +1579,7 @@ div#preloader {
 --------------------------------*/
 
 .suscribe-area {
-  background: #3EC1D5 none repeat scroll 0 0;
+  background: #ddd none repeat scroll 0 0;
   padding: 30px 0;
 }
 
@@ -1599,7 +1601,7 @@ div#preloader {
 .sus-btn {
   background: #fff none repeat scroll 0 0;
   border: 2px solid #fff;
-  color: #3EC1D5;
+  color: #ddd;
   display: inline-block;
   font-size: 16px;
   font-weight: 700;
@@ -1611,7 +1613,7 @@ div#preloader {
 }
 
 .sus-btn:hover {
-  background: #3EC1D5 none repeat scroll 0 0;
+  background: #ddd none repeat scroll 0 0;
   border: 2px solid #fff;
   color: #fff;
 }
@@ -1671,13 +1673,13 @@ div#preloader {
 
 .contact-form button[type=submit]:hover {
   color: #fff;
-  border: 1px solid #3EC1D5;
-  background: #3EC1D5;
+  border: 1px solid #ddd;
+  background: #ddd;
 }
 
 .contact-form  #sendmessage {
-  color: #3EC1D5;
-  border: 1px solid #3EC1D5;
+  color: #ddd;
+  border: 1px solid #ddd;
   display: none;
   text-align: center;
   padding: 15px;
@@ -1739,7 +1741,7 @@ div#preloader {
 .footer-area {
   width: 100%;
   padding: 40px 0;
-  background: #f9f9f9 none repeat scroll 0 0;
+  background: #0d0d0d none repeat scroll 0 0;
   box-sizing: border-box;
 } 
 /* <<<<<<< HEAD
@@ -1747,11 +1749,11 @@ div#preloader {
 
 
 .footer-head p {
-  color: rgb(0, 0, 0);
+  color: #fff;
 }
 
 .footer-head h4 {
-  color: #000000;
+  color: #fff;
   font-size: 16px;
   letter-spacing: 2px;
   padding-bottom: 10px;
@@ -1763,7 +1765,7 @@ div#preloader {
 }
 
 .footer-logo h2 {
-  color: #000000;
+  color: #fff;
   padding: 0;
   margin: 0;
   font-size: 36px;
@@ -1772,7 +1774,7 @@ div#preloader {
 }
 
 .footer-logo h2 span {
-  color: #3ec1d5;
+  color: #ddd;
 }
 
 .footer-icons ul li {
@@ -1780,8 +1782,7 @@ div#preloader {
 }
 
 .footer-icons ul li a {
-  border: 1px solid #444;
-  color: #444;
+  color: #ddd;
   display: block;
   font-size: 16px;
   height: 40px;
@@ -1803,7 +1804,7 @@ div#preloader {
 }
 
 .footer-contacts p span {
-  color: #3EC1D5;
+  color: #ddd;
   font-weight: 700;
 }
 .footer-contacts{
@@ -1827,24 +1828,24 @@ div#preloader {
 }
 
 .footer-content p {
-  color: #444;
+  color: #ddd;
   font-size: 14px;
   line-height: 26px;
   margin-bottom: 0;
 }
 
 .footer-content p a {
-  color: #3EC1D5;
+  color: #ddd;
   font-weight: 700;
 }
 
 .footer-content p a:hover {
-  color: blue;
+  color: #1d4e95;
   text-decoration:lch(from color l c h)
 }
 
 .footer-area-bottom {
-  color: #444;
+  color: #ddd;
   padding: 15rem 0;
 }
 
@@ -1854,9 +1855,9 @@ div#preloader {
 }
 
 .popular-tag ul li a, .footer-icons ul li a {
-  border: 1px solid #444;
+  border: 1px solid #ddd;
   border-radius: 30px;
-  color: #444;
+  color: #ddd;
   display: block;
   font-size: 13px;
   font-weight: 600;
@@ -1870,15 +1871,15 @@ div#preloader {
 
 
 .popular-tag ul li a:hover, .footer-icons ul li a:hover {
-  background: #3EC1D5;
-  border: 1px solid #3EC1D5;
+  background: #ddd;
+  border: 1px solid #ddd;
   color: #fff;
 }
 
 .popular-tag ul li a {
   border: 1px solid #444;
   border-radius: 30px;
-  color: #444;
+  color: #ddd;
   display: block;
   font-size: 13px;
   font-weight: 600;
@@ -1893,26 +1894,26 @@ div#preloader {
 }
 
 .footer-area-bottom {
-  background: #f1f1f1 none repeat scroll 0 0;
+  background: #000 none repeat scroll 0 0;
   padding: 15px 0;
 }
 
 .copyright-text a:hover {
   text-decoration: underline;
-  color: #3EC1D5;
+  color: #ddd;
 }
 
 .copyright-text a {
-  color: #444;
+  color: #ddd;
 }
 
 .copyright>p {
   margin-bottom: 0;
-  color: #444;
+  color: #ddd;
 }
 
 .copyright a, .credits a {
-  color: #3EC1D5;
+  color: #ddd;
 }
 
 .credits {
@@ -2015,7 +2016,7 @@ div#preloader {
 }
 
 .search-option button:hover {
-  color: #3ec1d5;
+  color: #ddd;
 }
 
 .left-blog h4 {
@@ -2075,8 +2076,8 @@ div#preloader {
 
 .ready-btn:hover {
   color: #fff;
-  background: #3EC1D5;
-  border: 1px solid #3EC1D5;
+  background: #ddd;
+  border: 1px solid #ddd;
   text-decoration: none;
 }
 
@@ -2094,7 +2095,7 @@ div#preloader {
 }
 
 .pst-content p a:hover, .left-blog ul li a:hover {
-  color: #3EC1D5;
+  color: #ddd;
 }
 
 .blog-page .single-blog {
@@ -2165,7 +2166,7 @@ div#preloader {
 }
 
 .entry-meta span a:hover {
-  color: #3EC1D5;
+  color: #ddd;
 }
 
 .post-information .entry-meta {
@@ -2187,7 +2188,7 @@ div#preloader {
 
 .entry-content blockquote {
   background: #fff none repeat scroll 0 0;
-  border-left: 5px solid #3EC1D5;
+  border-left: 5px solid #ddd;
   font-size: 17.5px;
   font-style: italic;
   margin: 0 0 20px 40px;
@@ -2195,8 +2196,8 @@ div#preloader {
 }
 
 .pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus {
-  background-color: #3EC1D5;
-  border-color: #3EC1D5;
+  background-color: #ddd;
+  border-color: #ddd;
   color: #fff;
   cursor: default;
   z-index: 3;
@@ -2236,8 +2237,8 @@ div#preloader {
 }
 
 .sharing-icon a:hover {
-  color: #3EC1D5;
-  border: 1px solid #3EC1D5;
+  color: #ddd;
+  border: 1px solid #ddd;
 }
 
 .single-blog .author-avatar {
@@ -2366,7 +2367,7 @@ span.email-notes {
 
 .comment-respond input[type="submit"] {
   background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-  border: 1px solid #3ec1d5;
+  border: 1px solid #ddd;
   border-radius: 20px;
   box-shadow: none;
   color: #444;
@@ -2388,13 +2389,13 @@ span.email-notes {
 }
 
 .comments-content-wrap span a:hover {
-  color: #3EC1D5;
+  color: #ddd;
 }
 
 .comment-respond input[type=submit]:hover {
-  border: 1px solid #3EC1D5;
+  border: 1px solid #ddd;
   color: #fff;
-  background: #3EC1D5;
+  background: #ddd;
 }
 
 .single-blog .blog-pagination {
@@ -2402,6 +2403,28 @@ span.email-notes {
   margin: 0;
   padding-top: 30px;
 }
+
+
+
+.logoImg {
+  /* Give same size as nav bar */
+  width: 40px;
+  height: 40px;
+
+
+  /* width: 24px;
+  height: 24px; */
+}
+
+
+
+
+
+
+
+
+
+
 
 /*----------------------------------------
  .End CSS
