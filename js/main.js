@@ -254,3 +254,12 @@ fetch("https://api.publicapis.org/entries")
     displayCocktail(data)
   })
   .catch((error) => console.error("FETCH ERROR:", error));
+
+
+  // window.onscroll = function() {scrollFunction()};
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  
