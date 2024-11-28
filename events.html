@@ -3,14 +3,16 @@
 
 <head>
     <meta charset="utf-8">
-    <title>EII</title>
+    <!-- <title>EII 2024</title> -->
+    <title>EII 2024</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
     <!-- Favicons -->
-    <link href="img/favicon.png" rel="icon">
-    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- <link href="img/favicon.png" rel="icon"> -->
+  <!-- <link href="img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+  <link href="\img\about\1.png" rel="icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900"
@@ -38,6 +40,13 @@
 
     <!-- Responsive Stylesheet File -->
     <link href="css/responsive.css" rel="stylesheet">
+
+
+      <!-- stylesheet for new slideshow -->
+  <link rel="stylesheet" href="css/slideshowStyle87.css">
+
+  <!-- stylesheet for new navbar -->
+    <link rel="stylesheet" href="css/navbarStyles.css">
     <style>
         .modal {
   text-align: center;
@@ -95,46 +104,38 @@
             <nav class="navbar navbar-default">
               <!-- Brand and toggle get grouped for better mobile display -->
               <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".bs-example-navbar-collapse-1" aria-expanded="false">
-										<span class="sr-only">Toggle navigation</span>
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-									</button>
+                <button type="button" class="navbar-toggle"
+                  aria-expanded="false" onclick="openNav()" style="z-index: 120">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
                 <!-- Brand -->
                 <a class="navbar-brand page-scroll sticky-logo" href="index.html">
-                  <h1><span>E</span>II</h1>
+                  <!-- <h1><span>E</span>II</h1> -->
                   <!-- Uncomment below if you prefer to use an image logo -->
-                  <!-- <img src="img/logo.png" alt="" title=""> -->
-								</a>
+                  <img src="img/eii-white-logo.png" alt="" title="" class="logoImg">
+                </a>
               </div>
               <!-- Collect the nav links, forms, and other content for toggling -->
-              <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
-                <ul class="nav navbar-nav navbar-right">
+              <div class="main-menu nav87" id="navbar-example">
+                <ul class="nav navbar-nav navbar-right navbar87" id="nav87">
                   <li>
-                    <a class="page-scroll" href="index.html#home">Home</a>
+                    <a class="page-scroll" href="index.html">Home</a>
                   </li>
-                  <li>
-                    <a class="page-scroll" href="index.html#about">About</a>
-                  </li>
-                  <li  class="active">
-                    <a  href="events.html">Events</a>
+                  <li class="active">
+                    <a href="events.html">Events</a>
                   </li>
                   <li>
-                    <a  href="people.html">People</a>
+                    <a href="mentors.html">Mentors</a>
                   </li>
                   <li>
-                    <a  href="team.html">Team</a>
+                    <a href="team.html">Team</a>
                   </li>
                   <li>
-                    <a href="blog.html">Blog</a>
+                    <a href="incubator.html">Incubation</a>
                   </li>
-                  
-                  	 
-                  	<li>
-                    <a  href="incubator.html">Incubation</a>
-                  </li>
-                  
                 </ul>
               </div>
               <!-- navbar-collapse -->
@@ -149,75 +150,30 @@
   <!-- header end -->
     <!-- Start Slider Area -->
   <div id="home" class="slider-area">
-    <div class="bend niceties preview-2">
-      <div id="ensign-nivoslider" class="slides">
-        <img src="img/slider/events/slider1.jpg" alt="" title="#slider-direction-1" />
-        <img src="img/slider/events/slider2.jpg" alt="" title="#slider-direction-2" />
-        <img src="img/slider/events/slider3.jpg" alt="" title="#slider-direction-3" />
+    <div class="container87">
+      <div class="controls87" id="goLeft" onclick="fn_goLeftClicked()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+        </svg>
       </div>
-
-      <!-- direction 1 -->
-      <div id="slider-direction-1" class="slider-direction slider-one">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-              <div class="slider-content">
-                <!--layer 1-->
-
-                <!-- layer 2 -->
-                <div class="layer-1-2 wow slideInUp" data-wow-duration="1s" data-wow-delay=".1s">
-                  <h1 class="title2">Innovate</h1>
-                </div>
-                <!-- layer 3 -->
-                <div class="layer-1-3 hidden-xs wow slideInUp" data-wow-duration="1s" data-wow-delay=".2s">
-                </div>
-              </div>
-            </div>
-          </div>
+      <div class="controls87" id="goRight" onclick="fn_goRightClicked()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+      </svg></div>
+      <!-- <div class="currentSlideIndicatorsContainer" id="currentSlideIndicatorsContainer"></div> -->
+      <div class="slideshow87" id="slideshow87">
+        <div class="slides87">
+          <img class="slidesImg87" src="./img/slider/events/slider1.jpg"></img>
+          <div class="slidesText87">Innovate</div>
         </div>
-      </div>
-
-      <!-- direction 2 -->
-      <div id="slider-direction-2" class="slider-direction slider-two">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-              <div class="slider-content text-center">
-                <!-- layer 1 -->
-
-                <!-- layer 2 -->
-                <div class="layer-1-2 wow slideInUp" data-wow-duration="1s" data-wow-delay=".1s">
-                  <h1 class="title2">Inspire</h1>
-                </div>
-                <!-- layer 3 -->
-                <div class="layer-1-3 hidden-xs wow slideInUp" data-wow-duration="1s" data-wow-delay=".2s">
-
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="slides87">
+          <img class="slidesImg87" src="./img/slider/events/slider2.jpg"></img>
+          <div class="slidesText87">Inspire</div>
         </div>
-      </div>
-
-      <!-- direction 3 -->
-      <div id="slider-direction-3" class="slider-direction slider-two">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-              <div class="slider-content">
-                <!-- layer 1 -->
-
-                <!-- layer 2 -->
-                <div class="layer-1-2 wow slideInUp" data-wow-duration="1s" data-wow-delay=".1s">
-                  <h1 class="title2">Empower</h1>
-                </div>
-                <!-- layer 3 -->
-                <div class="layer-1-3 hidden-xs wow slideInUp" data-wow-duration="1s" data-wow-delay=".2s">
-
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="slides87">
+          <img class="slidesImg87" src="./img/slider/events/slider3.jpg"></img>
+          <div class="slidesText87">Empower</div>
         </div>
       </div>
     </div>
@@ -398,7 +354,8 @@
               <div class="footer-content">
                 <div class="footer-head">
                   <div class="footer-logo">
-                    <h2><span>E</span>II</h2>
+                    <!-- Adding logo -->
+                    <img src="img/eii-white-logo.png" alt="" style="width: 100px; height: 100px;">
                   </div>
   
                   <p>IIT Gandhinagar<br>Palaj, Gandhinagar - 382355<br>Gujarat, India</p>
@@ -413,12 +370,11 @@
                   <h4>information</h4>
                   <div class="footer-contacts">
                     <p><span>Contact Us: </span>
-                      <p> Rupak Banerjee <br>
-                         rupak.banerjee@iitgn.ac.in 
-                       </p>
-                        <br>
+                      <p> Rupak Banerjee <br></p>
                     </p>
-                    <p><span>Email Us: </span>eii@iitgn.ac.in</p>
+                    <a href="mailto:rupak.banerjee@iitgn.ac.in">rupak.banerjee@iitgn.ac.in</a> <br> <br>
+                    <p style="display: inline;"><span>Email Us: </span></p>
+                    <span><a href="mailto:eii@iitgn.ac.in">eii@iitgn.ac.in</a> </span>
                     <p>
                       <span style="font-size: 30px;"><a href="https://www.facebook.com/EntrepreneurshipInitiativeIITGN/"
                           target="_blank"><i class="fab fa-facebook-square"></a></i></span>
@@ -442,13 +398,9 @@
                   <div class="footer-head">
                     <h4>USEFUL LINKS</h4>
                     <div class="footer-contacts">
-                      <p><a href="/home" style="font-weight: bold;">Home</a></p>
-                      <p><a href="#about" style="font-weight: bold;">About Us</a></p>
-                      <p><a href="/blog" style="font-weight: bold;">E-Cell Blog</a></p>
-                      <p><a href="/gallery" style="font-weight: bold;">Gallery</a></p>
-                      <p><a href="/contact" style="font-weight: bold;">Contact Us</a></p>
-                      <img src="./1.png" alt="" style="width: 10rem; height: 10rem; display: flex;">
-                    </div>
+                      <p><a href="/index.html" style="font-weight: bold;">Home</a></p>
+                      <p><a href="/index.html#about" style="font-weight: bold;">About Us</a></p>
+                      </div>
                   </div>
                 </div>
           </div>
@@ -462,7 +414,7 @@
         <div class="row">
           <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="footer-content text-center">
-              <p>© 2021 EII. All Rights Reserved. | Designed by <a href="https://www.linkedin.com/in/harshita-ramchandani-1b1b3b1b3/"
+              <p>© 2021 EII. All Rights Reserved. | Designed by <a href="https://www.linkedin.com/company/eii/"
                   target="_blank">EII Team</a></p>
             </div>
           </div>
@@ -651,7 +603,13 @@
     <!-- Contact Form JavaScript File -->
     <script src="contactform/contactform.js"></script>
 
-    <script src="js/main.js"></script>
+  <!-- JavaScript for new slideshow -->
+  <script src="js/slideshow.js"></script>
+
+  <script src="js/main.js"></script>
+
+  <!-- Javascript for navbar -->
+   <script src="js/navbar.js"></script>
 </body>
 
 </html>

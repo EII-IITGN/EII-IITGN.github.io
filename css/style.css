@@ -150,7 +150,7 @@ a {
 }
 
 a:hover {
-  color: #3EC1D5;
+  color: #ddd;
   text-decoration: none;
 }
 
@@ -172,14 +172,16 @@ body {
 .back-to-top {
   position: fixed;
   display: none;
-  background: #3EC1D5;
+  background: #222;
   color: #fff;
   padding: 6px 12px 9px 12px;
   font-size: 16px;
   border-radius: 2px;
   right: 15px;
   bottom: 15px;
-  transition: background 0.5s;
+  transition: background 0.25s;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
@@ -189,13 +191,13 @@ body {
 }
 
 .back-to-top:focus {
-  background: #3EC1D5;
+  background: #1d4e95;
   color: #fff;
   outline: none;
 }
 
 .back-to-top:hover {
-  background: #3cd6ed;
+  background: #1d4e95;
   color: #fff;
 }
 
@@ -269,17 +271,17 @@ circle {
 
 
 ::-moz-selection {
-  background: #3EC1D5;
+  background: #ddd;
   text-shadow: none;
 }
 
 ::selection {
-  background: #3EC1D5;
+  background: #ddd;
   text-shadow: none;
 }
 
 ::selection {
-  background: #3EC1D5;
+  background: #ddd;
   text-shadow: none;
 }
 
@@ -400,7 +402,7 @@ circle {
 }
 
 .main-menu ul.navbar-nav li a:hover {
-  color: #3EC1D5;
+  color: #ddd;
 }
 
 .navbar {
@@ -492,7 +494,7 @@ circle {
 }
 
 .sticky-logo h1 span {
-  color: #3ec1d5;
+  color: #ddd;
 }
 .stick .main-menu ul.navbar-nav li.active a::after {
   border: 1px solid #fff;
@@ -574,7 +576,7 @@ circle {
 }
 
 .single-well ul li i {
-  color: #3EC1D5;
+  color: #ddd;
   padding-right: 10px;
   font-size: 12px;
 }
@@ -609,7 +611,7 @@ circle {
 }
 
 .services-details:hover h4, .services-details:hover .services-icon {
-  color: #3EC1D5;
+  color: #ddd;
 }
 
 .row.second-row {
@@ -709,7 +711,7 @@ circle {
 }
 
 .faq-details h4.check-title a.active, .faq-details a.active span.acc-icons::before {
-  color: #3EC1D5;
+  color: #ddd;
 }
 
 .faq-details a.active span.acc-icons::before {
@@ -775,7 +777,7 @@ circle {
 
 .tab-menu ul li.active a, .tab-menu ul li.hover a, .tab-menu ul li.focus a {
   border-bottom: 1px solid #fff;
-  color: #3EC1D5 !important;
+  color: #ddd !important;
 }
 
 .tab-menu .nav-tabs {
@@ -871,7 +873,7 @@ circle {
 }
 
 .suscribe-input button {
-  background: #3ec1d5 none repeat scroll 0 0;
+  background: #ddd none repeat scroll 0 0;
   border: medium none;
   border-radius: 0 20px 20px 0;
   color: #fff;
@@ -884,12 +886,57 @@ circle {
 
 .suscribe-input button:hover {
   background: #fff none repeat scroll 0 0;
-  color: #3ec1d5;
+  color: #ddd;
 }
 
 /*----------------------------------------
  8.Team Area Css
 ----------------------------------------*/
+/* Base style for the box */
+
+
+
+.department-tabs {
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.team-tab-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ffffffc5;
+  color: #274492;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: Raleway, sans-serif;
+  font-size: medium;
+  transition: background-color 0.3s ease;
+}
+
+.team-tab-button.active-team-button{
+  background-color: #d9e2fa;
+  color: #173380;
+}
+
+.team-content {
+  display: none;
+  padding: 20px;
+}
+
+.team-content .glow-box:hover {
+  box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3), 0 4px 30px rgba(0, 102, 255, 0.2);
+}
+
+.active-team-content {
+  display: block;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 
 .icons {
   width: 50%;
@@ -900,15 +947,15 @@ circle {
   font-size: 20px;
 }
 
-.our-team {
+.team-content {
   display: relative;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   background-color: white;
 }
-
-.our-team .team-head {
+/* 
+.team-content .team-head {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -924,15 +971,15 @@ circle {
   margin: 1rem auto;
 }
 
-.our-team .team-head:hover {
+.team-content .team-head:hover {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
-.our-team .team-head img {
-  /* width: 100%;
+.team-content .team-head img {
+  width: 100%;
   height: 15rem;
   object-fit: cover;
-  transition: .3s; */
+  transition: .3s; 
   width: 100%;
   height: 17.5em;
   background-position: center;
@@ -940,37 +987,39 @@ circle {
   transition: .3s;
 }
 
-.our-team .team-head:hover img {
+.team-content .team-head:hover img {
   transform: scale(1.1);
 }
 
-.our-team .team-head .content {
+.team-content .team-head .content {
   padding: 20px;
   text-align: center;
 }
 
-.our-team .team-head .content h2 { 
+.team-content .team-head .content h2 { 
   font-weight: bold;
   font-size: 2rem;
 }
 
-.our-team .team-head .content p {
+.team-content .team-head .content p {
   padding-bottom: 0%; 
   font-size: 1.5rem;
   margin: 10px 1 1;
   color: #777;
-}
+} */
 
-.our-team .cards {
+.team-content .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
-  margin:1rem auto;
+  width: 80%;
+  /* row-gap: 2rem; */
+  /* padding: 2rem; */
+  /* margin:1rem auto; */
 }
 
-.our-team h1 {
+.team-content h1 {
   margin: 0;
   padding: 1rem;
   text-align: center;
@@ -979,15 +1028,15 @@ circle {
   color: cornflowerblue;
 }
 
-.our-team p {
+.team-content p {
   font-size: 1.3rem;
   margin-bottom: 2em auto;
   text-align: center;
   color: #777;
 }
 
-.our-team .card {
-  margin: 1rem;
+.team-content .card {
+  /* margin: 1rem; */
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -997,14 +1046,10 @@ circle {
   height: 27.5em;
   background-size: cover;
   background-position: center;
-  margin: 3rem auto;
+  margin: 1.5rem auto;
 }
 
-.our-team .card:hover {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-}
-
-.our-team .card img {
+.team-content .card img {
   width: 100%;
   height: 17.5em;
   background-position: center;
@@ -1012,22 +1057,22 @@ circle {
   transition: .3s;
 }
 
-.our-team .card:hover img {
-  transform: scale(1.1);
+.team-content .card:hover img {
+  transform: scale(1.05);
 }
 
-.our-team .card .content {
+.team-content .card .content {
   padding: 20px;
   text-align: center;
 }
 
-.our-team .card .content h2 {
+.team-content .card .content h2 {
   font-weight: bold;
   font-size: 2rem;
   margin: 0;
 }
 
-.our-team .card .content p {
+.team-content .card .content p {
   padding-bottom: 0%; 
   font-size: 1.5rem;
   margin: 10px 1 0;
@@ -1052,7 +1097,7 @@ circle {
 }
 
 .work-left-text {
-  background: #3EC1D5 none repeat scroll 0 0;
+  background: #ddd none repeat scroll 0 0;
 }
 
 .work-left-text {
@@ -1134,8 +1179,8 @@ circle {
 }
 
 .project-menu li a.active, .project-menu li a:hover {
-  border-color: #3EC1D5;
-  background: #3EC1D5;
+  border-color: #ddd;
+  background: #ddd;
   color: #fff;
   text-decoration: none;
 }
@@ -1304,7 +1349,7 @@ circle {
   position: absolute;
   right: 50px;
   top: 12px;
-  color: #3EC1D5;
+  color: #ddd;
 }
 
 .pri_table_list button {
@@ -1341,7 +1386,7 @@ circle {
 }
 
 .saleon {
-  background: #3EC1D5 none repeat scroll 0 0;
+  background: #ddd none repeat scroll 0 0;
   color: #fff;
   font-size: 13px;
   font-weight: 700;
@@ -1370,8 +1415,8 @@ circle {
 }
 
 .active>button {
-  background: #3EC1D5 none repeat scroll 0 0;
-  border: 1px solid #3EC1D5;
+  background: #ddd none repeat scroll 0 0;
+  border: 1px solid #ddd;
   color: #fff;
   transition: 0.4s;
 }
@@ -1479,7 +1524,7 @@ circle {
 }
 
 .testimonial-carousel.owl-carousel.owl-theme .owl-controls .owl-dots div.owl-dot.active span {
-  background: #3EC1D5;
+  background: #ddd;
 }
 
 .testi-text.text-center>h6 {
@@ -1495,7 +1540,7 @@ circle {
 }
 
 .guest-rev>a {
-  color: #3EC1D5;
+  color: #ddd;
   font-size: 14px;
 }
 
@@ -1608,7 +1653,7 @@ circle {
 }
 
 .single-blog .ready-btn:hover {
-  border: 1px solid #3EC1D5;
+  border: 1px solid #ddd;
   color: #fff;
 }
 
@@ -1617,7 +1662,7 @@ circle {
 --------------------------------*/
 
 .suscribe-area {
-  background: #3EC1D5 none repeat scroll 0 0;
+  background: #ddd none repeat scroll 0 0;
   padding: 30px 0;
 }
 
@@ -1639,7 +1684,7 @@ circle {
 .sus-btn {
   background: #fff none repeat scroll 0 0;
   border: 2px solid #fff;
-  color: #3EC1D5;
+  color: #ddd;
   display: inline-block;
   font-size: 16px;
   font-weight: 700;
@@ -1651,7 +1696,7 @@ circle {
 }
 
 .sus-btn:hover {
-  background: #3EC1D5 none repeat scroll 0 0;
+  background: #ddd none repeat scroll 0 0;
   border: 2px solid #fff;
   color: #fff;
 }
@@ -1711,13 +1756,13 @@ circle {
 
 .contact-form button[type=submit]:hover {
   color: #fff;
-  border: 1px solid #3EC1D5;
-  background: #3EC1D5;
+  border: 1px solid #ddd;
+  background: #ddd;
 }
 
 .contact-form  #sendmessage {
-  color: #3EC1D5;
-  border: 1px solid #3EC1D5;
+  color: #ddd;
+  border: 1px solid #ddd;
   display: none;
   text-align: center;
   padding: 15px;
@@ -1776,24 +1821,22 @@ circle {
 /*  15. Footer Area
 /*----------------------------------------*/
 
-/* .footer-area {
+.footer-area {
   width: 100%;
   padding: 40px 0;
-  background: #f9f9f9 none repeat scroll 0 0;
+  background: #0d0d0d none repeat scroll 0 0;
   box-sizing: border-box;
-<<<<<<< HEAD
->>>>>>> c4e5b6dbb39c3d8670ab3b804214e57029449504
-} */
-=======
-}
->>>>>>> 81190c403cc3205d1d27c260ce909207e5881e3d
+} 
+/* <<<<<<< HEAD
+>>>>>>> c4e5b6dbb39c3d8670ab3b804214e57029449504 */
+
 
 .footer-head p {
-  color: rgb(0, 0, 0);
+  color: #fff;
 }
 
 .footer-head h4 {
-  color: #000000;
+  color: #fff;
   font-size: 16px;
   letter-spacing: 2px;
   padding-bottom: 10px;
@@ -1805,7 +1848,7 @@ circle {
 }
 
 .footer-logo h2 {
-  color: #000000;
+  color: #fff;
   padding: 0;
   margin: 0;
   font-size: 36px;
@@ -1814,7 +1857,7 @@ circle {
 }
 
 .footer-logo h2 span {
-  color: #3ec1d5;
+  color: #ddd;
 }
 
 .footer-icons ul li {
@@ -1822,8 +1865,7 @@ circle {
 }
 
 .footer-icons ul li a {
-  border: 1px solid #444;
-  color: #444;
+  color: #ddd;
   display: block;
   font-size: 16px;
   height: 40px;
@@ -1845,7 +1887,7 @@ circle {
 }
 
 .footer-contacts p span {
-  color: #3EC1D5;
+  color: #ddd;
   font-weight: 700;
 }
 .footer-contacts{
@@ -1869,24 +1911,24 @@ circle {
 }
 
 .footer-content p {
-  color: #444;
+  color: #ddd;
   font-size: 14px;
   line-height: 26px;
   margin-bottom: 0;
 }
 
 .footer-content p a {
-  color: #3EC1D5;
+  color: #ddd;
   font-weight: 700;
 }
 
 .footer-content p a:hover {
-  color: blue;
+  color: #1d4e95;
   text-decoration:lch(from color l c h)
 }
 
 .footer-area-bottom {
-  color: #444;
+  color: #ddd;
   padding: 15rem 0;
 }
 
@@ -1896,9 +1938,9 @@ circle {
 }
 
 .popular-tag ul li a, .footer-icons ul li a {
-  border: 1px solid #444;
+  border: 1px solid #ddd;
   border-radius: 30px;
-  color: #444;
+  color: #ddd;
   display: block;
   font-size: 13px;
   font-weight: 600;
@@ -1912,15 +1954,15 @@ circle {
 
 
 .popular-tag ul li a:hover, .footer-icons ul li a:hover {
-  background: #3EC1D5;
-  border: 1px solid #3EC1D5;
+  background: #ddd;
+  border: 1px solid #ddd;
   color: #fff;
 }
 
 .popular-tag ul li a {
   border: 1px solid #444;
   border-radius: 30px;
-  color: #444;
+  color: #ddd;
   display: block;
   font-size: 13px;
   font-weight: 600;
@@ -1935,26 +1977,26 @@ circle {
 }
 
 .footer-area-bottom {
-  background: #f1f1f1 none repeat scroll 0 0;
+  background: #000 none repeat scroll 0 0;
   padding: 15px 0;
 }
 
 .copyright-text a:hover {
   text-decoration: underline;
-  color: #3EC1D5;
+  color: #ddd;
 }
 
 .copyright-text a {
-  color: #444;
+  color: #ddd;
 }
 
 .copyright>p {
   margin-bottom: 0;
-  color: #444;
+  color: #ddd;
 }
 
 .copyright a, .credits a {
-  color: #3EC1D5;
+  color: #ddd;
 }
 
 .credits {
@@ -2057,7 +2099,7 @@ circle {
 }
 
 .search-option button:hover {
-  color: #3ec1d5;
+  color: #ddd;
 }
 
 .left-blog h4 {
@@ -2117,8 +2159,8 @@ circle {
 
 .ready-btn:hover {
   color: #fff;
-  background: #3EC1D5;
-  border: 1px solid #3EC1D5;
+  background: #ddd;
+  border: 1px solid #ddd;
   text-decoration: none;
 }
 
@@ -2136,7 +2178,7 @@ circle {
 }
 
 .pst-content p a:hover, .left-blog ul li a:hover {
-  color: #3EC1D5;
+  color: #ddd;
 }
 
 .blog-page .single-blog {
@@ -2207,7 +2249,7 @@ circle {
 }
 
 .entry-meta span a:hover {
-  color: #3EC1D5;
+  color: #ddd;
 }
 
 .post-information .entry-meta {
@@ -2229,7 +2271,7 @@ circle {
 
 .entry-content blockquote {
   background: #fff none repeat scroll 0 0;
-  border-left: 5px solid #3EC1D5;
+  border-left: 5px solid #ddd;
   font-size: 17.5px;
   font-style: italic;
   margin: 0 0 20px 40px;
@@ -2237,8 +2279,8 @@ circle {
 }
 
 .pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus {
-  background-color: #3EC1D5;
-  border-color: #3EC1D5;
+  background-color: #ddd;
+  border-color: #ddd;
   color: #fff;
   cursor: default;
   z-index: 3;
@@ -2278,8 +2320,8 @@ circle {
 }
 
 .sharing-icon a:hover {
-  color: #3EC1D5;
-  border: 1px solid #3EC1D5;
+  color: #ddd;
+  border: 1px solid #ddd;
 }
 
 .single-blog .author-avatar {
@@ -2408,7 +2450,7 @@ span.email-notes {
 
 .comment-respond input[type="submit"] {
   background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-  border: 1px solid #3ec1d5;
+  border: 1px solid #ddd;
   border-radius: 20px;
   box-shadow: none;
   color: #444;
@@ -2430,13 +2472,13 @@ span.email-notes {
 }
 
 .comments-content-wrap span a:hover {
-  color: #3EC1D5;
+  color: #ddd;
 }
 
 .comment-respond input[type=submit]:hover {
-  border: 1px solid #3EC1D5;
+  border: 1px solid #ddd;
   color: #fff;
-  background: #3EC1D5;
+  background: #ddd;
 }
 
 .single-blog .blog-pagination {
@@ -2444,6 +2486,28 @@ span.email-notes {
   margin: 0;
   padding-top: 30px;
 }
+
+
+
+.logoImg {
+  /* Give same size as nav bar */
+  width: 40px;
+  height: 40px;
+
+
+  /* width: 24px;
+  height: 24px; */
+}
+
+
+
+
+
+
+
+
+
+
 
 /*----------------------------------------
  .End CSS

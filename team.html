@@ -3,14 +3,16 @@
 
 <head>
   <meta charset="utf-8">
-  <title>EII</title>
+  <!-- <title>EII 2024</title> -->
+  <title>EII 2024</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
 
   <!-- Favicons -->
-  <link href="img/favicon.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- <link href="img/favicon.png" rel="icon"> -->
+  <!-- <link href="img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+  <link href="\img\about\1.png" rel="icon">
 
   <!-- Google Fonts -->
   <link
@@ -40,6 +42,12 @@
   <!-- Responsive Stylesheet File -->
   <link href="css/responsive.css" rel="stylesheet">
 
+  <!-- Stylesheet for slideshow -->
+    <link rel="stylesheet" href="css/slideshowStyle87.css">
+
+  <!-- Stylesheet for navbar -->
+  <link rel="stylesheet" href="css/navbarStyles.css">
+
 </head>
 
 <body data-spy="scroll" data-target="#navbar-example">
@@ -66,8 +74,8 @@
     </svg>
 </div>
 
+  <!-- header-area start -->
   <header>
-    <!-- header-area start -->
     <div id="sticker" class="header-area">
       <div class="container">
         <div class="row">
@@ -77,8 +85,8 @@
             <nav class="navbar navbar-default">
               <!-- Brand and toggle get grouped for better mobile display -->
               <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                  data-target=".bs-example-navbar-collapse-1" aria-expanded="false">
+                <button type="button" class="navbar-toggle"
+                  aria-expanded="false" onclick="openNav()" style="z-index: 120">
                   <span class="sr-only">Toggle navigation</span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
@@ -86,34 +94,26 @@
                 </button>
                 <!-- Brand -->
                 <a class="navbar-brand page-scroll sticky-logo" href="index.html">
-                  <h1><span>E</span>II</h1>
+                  <!-- <h1><span>E</span>II</h1> -->
                   <!-- Uncomment below if you prefer to use an image logo -->
-                  <!-- <img src="img/logo.png" alt="" title=""> -->
+                  <img src="img/eii-white-logo.png" alt="" title="" class="logoImg">
                 </a>
               </div>
               <!-- Collect the nav links, forms, and other content for toggling -->
-              <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
-                <ul class="nav navbar-nav navbar-right">
+              <div class="main-menu nav87" id="navbar-example">
+                <ul class="nav navbar-nav navbar-right navbar87" id="nav87">
                   <li>
-                    <a class="page-scroll" href="index.html#home">Home</a>
-                  </li>
-                  <li>
-                    <a class="page-scroll" href="index.html#about">About</a>
+                    <a class="page-scroll" href="index.html">Home</a>
                   </li>
                   <li>
                     <a href="events.html">Events</a>
                   </li>
                   <li>
-                    <a href="people.html">People</a>
+                    <a href="mentors.html">Mentors</a>
                   </li>
                   <li class="active">
                     <a href="team.html">Team</a>
                   </li>
-                  <li>
-                    <a href="blog.html">Blog</a>
-                  </li>
-
-
                   <li>
                     <a href="incubator.html">Incubation</a>
                   </li>
@@ -132,653 +132,1848 @@
 
  <!-- Start Slider Area -->
  <div id="home" class="slider-area">
-  <div class="bend niceties preview-2">
-    <div id="ensign-nivoslider" class="slides">
-      <img src="img/slider/team/slider1..jpg" alt="" title="#slider-direction-1" style="object-fit: cover;">
-      <img src="img/slider/team/slider2.jpg" alt="" title="#slider-direction-2" style="object-fit: cover;">
-      <img src="img/slider/team/slider3.jpg" alt="" title="#slider-direction-3" style="object-fit: cover;">
+  <div class="container87">
+    <div class="controls87" id="goLeft" onclick="fn_goLeftClicked()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left"
+        viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+      </svg>
     </div>
-
-    <!-- direction 1 -->
-    <div id="slider-direction-1" class="slider-direction slider-one">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 col-sm-12 col-xs-12">
-            <div class="slider-content">
-              <!--layer 1-->
-
-              <!-- layer 2 -->
-              <div class="layer-1-2 wow slideInUp" data-wow-duration="1s" data-wow-delay=".1s">
-                <h1 class="title2">Inno-Vision</h1>
-              </div>
-              <!-- layer 3 -->
-              <div class="layer-1-3 hidden-xs wow slideInUp" data-wow-duration="1s" data-wow-delay=".2s">
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="controls87" id="goRight" onclick="fn_goRightClicked()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+    </svg></div>
+    <!-- <div class="currentSlideIndicatorsContainer" id="currentSlideIndicatorsContainer"></div> -->
+    <div class="slideshow87" id="slideshow87">
+      <div class="slides87">
+        <img class="slidesImg87" src="./img/slider/team/slider1.jpg"></img>
+        <div class="slidesText87">ForRealtitude</div>
       </div>
-    </div>
-
-    <!-- direction 2 -->
-    <div id="slider-direction-2" class="slider-direction slider-two">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 col-sm-12 col-xs-12">
-            <div class="slider-content text-center">
-              <!-- layer 1 -->
-
-              <!-- layer 2 -->
-              <div class="layer-1-2 wow slideInUp" data-wow-duration="1s" data-wow-delay=".1s">
-                <h1 class="title2">ForRealtitude</h1>
-              </div>
-              <!-- layer 3 -->
-              <div class="layer-1-3 hidden-xs wow slideInUp" data-wow-duration="1s" data-wow-delay=".2s">
-
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="slides87">
+        <img class="slidesImg87" src="./img/slider/team/slider2.jpg"></img>
+        <div class="slidesText87">Integration</div>
       </div>
-    </div>
-
-    <!-- direction 3 -->
-    <div id="slider-direction-3" class="slider-direction slider-two">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 col-sm-12 col-xs-12">
-            <div class="slider-content">
-              <!-- layer 1 -->
-
-              <!-- layer 2 -->
-              <div class="layer-1-2 wow slideInUp" data-wow-duration="1s" data-wow-delay=".1s">
-                <h1 class="title2">Integration</h1>
-              </div>
-              <!-- layer 3 -->
-              <div class="layer-1-3 hidden-xs wow slideInUp" data-wow-duration="1s" data-wow-delay=".2s">
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- direction 4-->
-    <div id="slider-direction-4" class="slider-direction slider-two">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 col-sm-12 col-xs-12">
-            <div class="slider-content">
-              <!-- layer 1 -->
-
-              <!-- layer 2 -->
-              <div class="layer-1-2 wow slideInUp" data-wow-duration="1s" data-wow-delay=".1s">
-                <h1 class="title2">GrowNchange</h1>
-              </div>
-              <!-- layer 3 -->
-
-            </div>
-          </div>
-        </div>
+      <div class="slides87">
+        <img class="slidesImg87" src="./img/slider/team/slider3.jpg"></img>
+        <div class="slidesText87">Inno-Vision</div>
       </div>
     </div>
   </div>
-</div>
-<!-- End Slider Area -->
-<!-- End Slider Area -->
+  <!-- End Slider Area -->
+  <!-- End Slider Area -->
 
-  <!-- Start team Area -->
-  <div id="team" class="our-team-area" style="padding: 1%;">
+    <!-- Start team Area -->
+    <div id="team" class="our-team-area" style="padding: 1%;">
+      <div class="container">
+          <div class="section-headline text-center">
+              <h2>Our Team</h2>
+          </div>
+      </div>
+
+      <div class="department-tabs">
+          <button class="team-tab-button active-team-button"
+              onclick="showContent('coordinators', this)">Co-ordinators</button>
+          <button class="team-tab-button" onclick="showContent('design-team', this)">Design</button>
+          <button class="team-tab-button" onclick="showContent('cr-team', this)">Corporate Relations </button>
+          <button class="team-tab-button" onclick="showContent('event-team', this)">Event</button>
+          <button class="team-tab-button" onclick="showContent('marketing-team', this)">Marketing</button>
+      </div>
+
+      <div id="coordinators" class="team-content active-team-content">
+          <div class="cards">
+              <h1 style=" width:100%">Overall Coordinator</h1>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/Rupak.jpg" alt="Rupak Banerjee" class="team-img">
+                  <div class="content">
+                      <h2>Rupak Banerjee</h2>
+                      <p>Overall Coordinator</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/rupakbanerjee01/" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:rupak.banerjee@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/Suteekshna Mishra.jpg" alt="Suteekshna Mishra" class="team-img">
+                  <div class="content">
+                      <h2>Suteekshna Mishra </h2>
+                      <p>Overall Coordinator</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/suteekshna-mishra-14b15b253/" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:suteekshna.mishra@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+
+          <div class="cards">
+              <h1 style=" width:100%">Coordinator</h1>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/Shriyansh Kumar.jpg" alt="Shriyansh Kumar" class="team-img">
+                  <div class="content">
+                      <h2>Shriyansh Kumar</h2>
+                      <p>Event Coordinator</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/shriyansh-kumar-85832424b/" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:shriyansh.kumar@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="" alt="Manmohan Singh" class="team-img">
+                  <div class="content">
+                      <h2>Manmohan Singh</h2>
+                      <p>Event Coordinator</p>
+                      <div class="icons">
+                          <a href="#" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:23110342@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/Jainil Devaliya.jpg" alt="Jainil Devaliya" class="team-img">
+                  <div class="content">
+                      <h2>Jainil Devaliya</h2>
+                      <p>Design Coordinator</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/jainil-devaliya/" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:23110090@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="" alt="Suyog Latake" class="team-img">
+                  <div class="content">
+                      <h2>Suyog Latake</h2>
+                      <p>Design Coordinator</p>
+                      <div class="icons">
+                          <a href="#" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:23110342@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/Vansh Rastogi.png" alt="Vansh Rastogi" class="team-img">
+                  <div class="content">
+                      <h2>Vansh Rastogi</h2>
+                      <p style="font-size: 13.9px;">Corporate Relations Coordinator</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/vanshrastogi21/" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:23110352@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/Zagade Atharva Gajanan.jpg" alt="Atharva Zagade" class="team-img">
+                  <div class="content">
+                      <h2>Atharva Zagade</h2>
+                      <p>Marketing Coordinator</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/zagadeatharva/" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:23110372@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div id="design-team" class="team-content">
+          <!-- Tech Team -->
+          <div class="cards">
+              <h1 style=" width:100%"> Tech Team </h1>
+              <div class="card glow-box">
+                  <img src="./teamImages/IMG20240512113619 - Naveen Pal 23110216.jpg" alt="Naveen pal"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Naveen pal</h2>
+                      <p>Tech Executive Head</p>
+                      <div class="icons">
+                          <a href="https://linkedin.com/in/naveenpal-" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:23110216@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/Rajput Vivek .jpeg" alt="Rajput Vivek" class="team-img">
+                  <div class="content">
+                      <h2>Rajput Vivek</h2>
+                      <p>Sr. Tech Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/vivek-rajput-iitgn2ndyear/" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:23110269@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/arnavjagtap - Jagtap Arnav Shrikant 23110143.jpg" alt="Arnav Jagtap"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Arnav Jagtap</h2>
+                      <p>Sr. Tech Executive</p>
+                      <div class="icons">
+                          <a href="http://www.linkedin.com/in/arnavshrikantjagtap" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:23110143@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/Vipul Sunil Patil - Vipul Patil.jpeg" alt="Vipul Sunil Patil"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Vipul Sunil Patil</h2>
+                      <p>Sr. Tech Executive</p>
+                      <div class="icons">
+                          <a href="http://www.linkedin.com/in/vipul-patil-b76a65250" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:vipul.patil@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/Vedant Acharya - Vedant Acharya.jpg" alt="Acharya Vedant Vijaykumar"
+                      class="team-img">
+                  <div class="content">
+                      <h2 style="font-size: 16px;">Acharya Vedant Vijaykumar</h2>
+                      <p>Sr. Tech Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/vedant-acharya-a39918280" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:23110010@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/WhatsApp Image 2024-10-21 at 21.33.41 - Andhale Advait Bapurao 24110039.jpeg"
+                      alt="Advait Bapurao Andhale" class="team-img">
+                  <div class="content">
+                      <h2 style="font-size: 18px;">Advait Bapurao Andhale</h2>
+                      <p>Jr. Tech Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/advait-andhale-3aa475334/" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110039@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/Eshaan_Jaiswal.jpeg" alt="Eshaan Jaiswal" class="team-img">
+                  <div class="content">
+                      <h2>Eshaan Jaiswal</h2>
+                      <p>Jr. Tech Executive</p>
+                      <div class="icons">
+                          <a href="https://in.linkedin.com/in/eshaan-jaiswal-42a45b229" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110116@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/Daksh Amit Desai.jpeg " alt="Daksh Desai" class="team-img">
+                  <div class="content">
+                      <h2>Daksh Desai</h2>
+                      <p>Jr. Tech Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/dakshdesai00/" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110098@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Design team -->
+          <div class="cards">
+              <h1 style=" width:100%; margin-top:3rem;"> Design Team </h1>
+              <div class="card glow-box">
+                  <img src="" alt="Trisha Biswas" class="team-img">
+                  <div class="content">
+                      <h2>Trisha Biswas</h2>
+                      <p>Sr. Design Executive</p>
+                      <div class="icons">
+                          <a href="#" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:23110342@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/5 - Lakshya Kesarwani 23110187.jpg" alt="Lakshya Kesarwani" class="team-img">
+                  <div class="content">
+                      <h2>Lakshya Kesarwani</h2>
+                      <p>Sr. Design Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/lakshya-kesarwani-2563a82a3/" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:23110187@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/20240919_050545 - Tanushka Anand Sonde 23110332.jpg" alt="Tanushka Sonde"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Tanushka Sonde</h2>
+                      <p>Sr. Design Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/tanushka-sonde-97a01b28a" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:23110332@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/WhatsApp Image 2024-10-20 at 11.13.10_56989880 - Adarsh Patidar 23110012.jpg"
+                      alt="Adarsh Patidar" class="team-img">
+                  <div class="content">
+                      <h2>Adarsh Patidar</h2>
+                      <p>Sr. Design Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/adarsh-patidar-38a01a28a/" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:23110012@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="Data Not found" alt="Aaditya Bhandari" class="team-img">
+                  <div class="content">
+                      <h2>Aaditya Bhandari</h2>
+                      <p>Sr. Design Executive</p>
+                      <div class="icons">
+                          <a href="#" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:23110001@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/IMG_20240402_021305 - Prashant Mahawar 23110255.jpg" alt="Prashant Mahawar"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Prashant Mahawar</h2>
+                      <p>Sr. Design Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/prashant-mahawar-3515882ba/" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:23110255@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="Data not provided" alt="Aarchi Desai" class="team-img">
+                  <div class="content">
+                      <h2>Aarchi Desai</h2>
+                      <p>Sr. Design Executive</p>
+                      <div class="icons">
+                          <a href="#" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24120001@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/linkedindp - Maske Kunal Kachru 23110201.jpg" alt="Kunal Maske"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Kunal Maske</h2>
+                      <p>Sr. Design Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/kunal-maske/" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:23110201@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/Khyati Jain.jpg" alt="Khyati Jain" class="team-img">
+                  <div class="content">
+                      <h2>Khyati Jain</h2>
+                      <p>Jr. Design Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/khyati-jain-bb0232321/" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24120010@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/20241010_193626 - Dhanraj Visapara 24110106.jpg" alt="Dhanraj Visapara"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Dhanraj Visapara</h2>
+                      <p>Jr. Design Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/dhanraj-v-429798320" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110106@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/ei_1730284286115-removebg-preview - Alok Kumar 24110031.png" alt="Alok Kumar"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Alok Kumar</h2>
+                      <p>Jr. Design Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/alok-kumar-779bb3322" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110031@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/IMG20240907131341 - Gautam Krishna 24110121.jpg" alt="Gautam Krishna"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Gautam Krishna</h2>
+                      <p>Jr. Design Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/gautam-krishna-130a50329" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110121@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="Put Image here (won't be provided to you just leave it as it is)"
+                      alt="Aslese Abhinit Ekka" class="team-img">
+                  <div class="content">
+                      <h2>Aslese Abhinit Ekka</h2>
+                      <p>Jr. Design Executive</p>
+                      <div class="icons">
+                          <a href="#" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110058@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/6 - Jain Bhavya Mahavir 24110141.jpg" alt="Jain Bhavya Mahavir"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Jain Bhavya Mahavir</h2>
+                      <p>Jr. Design Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/bhavya-jain-215198313" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110141@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/IMG_20241030_161113 - Omm Arindam 24110229.jpg" alt="Omm Arindam"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Omm Arindam</h2>
+                      <p>Jr. Design Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/omm-arindam-12435b323" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110229@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/IMG-20241008-WA0020 - Wani Shreya Jagesh 24110396.jpg" alt="Shreya Wani"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Shreya Wani</h2>
+                      <p>Jr. Design Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/shreya-wani-929b91318" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110396@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="Put Image here (won't be provided to you just leave it as it is)" alt="Jakku Niharika Sri"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Jakku Niharika Sri</h2>
+                      <p>Jr. Design Executive</p>
+                      <div class="icons">
+                          <a href="#" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110143@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+      <!-- Corporate Relations Team -->
+      <div id="cr-team" class="team-content">
+          <div class="cards">
+              <h1 style=" width:100%"> Corporate Relations Team </h1>
+              <div class="card glow-box">
+                  <img src="./teamImages/Pranjal Gaur.jpg" alt="Pranjal Gaur" class="team-img">
+                  <div class="content">
+                      <h2>Pranjal Gaur</h2>
+                      <p>Sr. CR Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/pranjal-gaur-601707262/" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:pranjal.gaur@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/IMG_20220904_121212_916 - Shubham Agrawal.webp" alt="Shubham Agarwal"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Shubham Agarwal</h2>
+                      <p>Sr. Corporate Relations Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/shubham-agrawal-01a310256" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:shubham.agrawal@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/ridham_patel - Ridham Patel.jpg" alt="Patel Ridham Vijaykumar"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Patel Ridham</h2>
+                      <p>Sr. Corporate Relations Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/ridhamp4/" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:23110238@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/Veer Jain.jpg" alt="Veer Jain" class="team-img">
+                  <div class="content">
+                      <h2>Veer Jain</h2>
+                      <p>Sr. Corporate Relations Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/veer-jain-618129333" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:23110355@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/Monika Sharma.jpeg" alt="Monika" class="team-img">
+                  <div class="content">
+                      <h2>Monika Sharma</h2>
+                      <p>Sr. Corporate Relations Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/monikasharma5/" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24520028@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/20220802_222636 - Anirudh Shastry Gowribhatla.jpg" alt="Anirudh Gowribhatla"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Anirudh Gowribhatla</h2>
+                      <p>Sr. Corporate Relations Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/anirudh-gowribhatla-2b775a246" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:shastrygowribhatla@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/pic - Bhavay Goyal 24110070.jpg" alt="Bhavay Goyal" class="team-img">
+                  <div class="content">
+                      <h2>Bhavay Goyal</h2>
+                      <p>Jr. Corporate Relations Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/bhavaygoyal/" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110070@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/Photo - Chaitanya Yogesh Bhoite 24110086.jpg" alt="Chaitanya Yogesh Bhoite"
+                      class="team-img">
+                  <div class="content">
+                      <h2 style="font-size: 17.8px;">Chaitanya Yogesh Bhoite</h2>
+                      <p>Jr. Corporate Relations Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/chaitanya-bhoite-102899320/" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110086@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/20240827_221546 - Ranparia Dishant 24110289.jpg" alt="Dishant Ranparia"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Dishant Ranparia</h2>
+                      <p>Jr. Corporate Relations Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/dishant-ranparia-010206316/" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110289@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/IMG_3110 - Gunda Sampreeth 24290003.JPG" alt="SAMPREETH GUNDA"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Sampreeth Gunda</h2>
+                      <p>Jr. Corporate Relations Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/sampreeth-gunda-9513ba230" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24290003@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/Armaan Atthi.jpeg" alt="Armaan Atthi" class="team-img">
+                  <div class="content">
+                      <h2>Armaan Atthi</h2>
+                      <p>Jr. Corporate Relations Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/armaan-atthi-a29112320/" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110050@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/IMG_20240807_172446_774 - Aryan Jha.jpg" alt="Aryan Mani Jha"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Aryan Mani Jha</h2>
+                      <p>Jr. Corporate Relations Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/aryanjha" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:Jhaaryan@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/IMG_20221212_192727_371 - Vaishnav Koka 24310069.jpg" alt="Vaishnav Koka"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Vaishnav Koka</h2>
+                      <p>Jr. Corporate Relations Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/vaishnav-koka-5a8382146" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24310069@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/DSC00268 - Akash Halder.JPG" alt="Akash Halder" class="team-img">
+                  <div class="content">
+                      <h2>Akash Halder</h2>
+                      <p>Jr. Corporate Relations Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/akash-halder-556019244" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24510014@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/Kavyansh Shandilya.jpeg" alt="Akash Halder" class="team-img">
+                  <div class="content">
+                      <h2>Kavyansh Shandilya</h2>
+                      <p>Jr. Corporate Relations Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/kavyanshshandilya/" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110163@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/Rishi Kaushik.heic" alt="Akash Halder" class="team-img">
+                  <div class="content">
+                      <h2>Rishi Kaushik Pinara </h2>
+                      <p>Jr. Corporate Relations Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/rishi-pinara-b14671328/" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110257@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/Pravallika - Pravallika Matha.jpg" alt="Pravallika Matha" class="team-img">
+                  <div class="content">
+                      <h2>Pravallika Matha</h2>
+                      <p>Jr. Corporate Relations Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/pravallika-matha-a06339328" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110198@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Marketing Team -->
+      <div id="marketing-team" class="team-content">
+          <div class="cards">
+              <h1 style=" width:100%"> Marketing Team </h1>
+              <div class="card glow-box">
+                  <img src="./teamImages/IMG-20240705-WA0003 - Kunala Thrisha 23110182.jpg" alt="Kunala Thrisha"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Kunala Thrisha</h2>
+                      <p>Sr. Marketing Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/thrisha-kunala-46436228b" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:23110182@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/WhatsApp Image 2024-10-30 at 10.43.12 PM - Paryu Jain 24120014.jpeg"
+                      alt="Paryu Jain" class="team-img">
+                  <div class="content">
+                      <h2>Paryu Jain</h2>
+                      <p>Sr. Marketing Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/paryu-jain-02206425b" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24120014@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="Put Image here (won't be provided to you just leave it as it is)" alt="Devvrat Hans"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Devvrat Hans</h2>
+                      <p>Sr. Marketing Executive</p>
+                      <div class="icons">
+                          <a href="#" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:23110094@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="Put Image here (won't be provided to you just leave it as it is)" alt="Madhup Sankhla"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Madhup Sankhla</h2>
+                      <p>Sr. Marketing Executive</p>
+                      <div class="icons">
+                          <a href="#" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:23110190@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/20240707_231829_remastered~2 - Dandekar Srushti Yogesh 23110084.jpg"
+                      alt="Srushti Dandekar" class="team-img">
+                  <div class="content">
+                      <h2>Srushti Dandekar</h2>
+                      <p>Sr. Marketing Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/srushti-dandekar-94667828b" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:23110084@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="Put Image here (won't be provided to you just leave it as it is)" alt="Jainam Savla"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Jainam Savla</h2>
+                      <p>Sr. Marketing Executive</p>
+                      <div class="icons">
+                          <a href="#" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:jainam.savla@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/profile-pic - Devendra Biswambhar Nath Dubey 24510041.png"
+                      alt="Devendra Biswambhar Nath Dubey" class="team-img">
+                  <div class="content">
+                      <h2>Devendra Biswambhar Nath Dubey</h2>
+                      <p>Sr. Marketing Executive</p>
+                      <div class="icons">
+                          <a href="http://www.linkedin.com/in/devendra-dubey-a648392a1" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24510041@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="Put Image here (won't be provided to you just leave it as it is)" alt="SHUBHAM- SAINI"
+                      class="team-img">
+                  <div class="content">
+                      <h2>SHUBHAM- SAINI</h2>
+                      <p>Sr. Marketing Executive</p>
+                      <div class="icons">
+                          <a href="#" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:23110308@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/Screenshot_2024-10-30-22-24-54-746_com.miui.gallery - Vansh Goel 24110379.jpg"
+                      alt="Vansh Goel" class="team-img">
+                  <div class="content">
+                      <h2>Vansh Goel</h2>
+                      <p>Jr. Marketing Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/vansh-goel-148007312" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110379@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="Put Image here (won't be provided to you just leave it as it is)" alt="Saksham Chourasia"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Saksham Chourasia</h2>
+                      <p>Jr. Marketing Executive</p>
+                      <div class="icons">
+                          <a href="#" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110312@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/IMG_20241003_022616 - Arpit Mahich 24110053.jpg" alt="Arpit Mahich"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Arpit Mahich</h2>
+                      <p>Jr. Marketing Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/arpit-mahich-106144333" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110053@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/_H1A6073 - Madhur 24110188.jpg" alt="Madhur Mittal" class="team-img">
+                  <div class="content">
+                      <h2>Madhur Mittal</h2>
+                      <p>Jr. Marketing Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/madhur-mittal-7b1bb6322" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110188@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/IMG_20241020_005105 - Chirag Vinayak Mahale 24110094.jpg"
+                      alt="Chirag Vinayak Mahale" class="team-img">
+                  <div class="content">
+                      <h2>Chirag Vinayak Mahale</h2>
+                      <p>Jr. Marketing Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/chirag-mahale-5ab6bb320" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110094@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/Screenshot_2024-10-21-20-52-06-592_com.miui.gallery-edit - Chaitanya Birajdar 24110084.jpg"
+                      alt="Chaitanya Birajdar" class="team-img">
+                  <div class="content">
+                      <h2>Chaitanya Birajdar</h2>
+                      <p>Jr. Marketing Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/chaitanya-birajdar-32bbb6322" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110084@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/Snapchat-609482660 - Monika Nagliya 24110209.jpg" alt="Monika Nagliya"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Monika Nagliya</h2>
+                      <p>Jr. Marketing Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/monika-nagliya-7b55a931a" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110209@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+      </div>
+
+      <!-- Events Team -->
+      <div id="event-team" class="team-content">
+          <div class="cards">
+              <h1 style=" width:100%"> Event Team </h1>
+              <div class="card glow-box">
+                  <img src="./teamImages/Rajat Kabra.jpg" alt="Rajat Kabra" class="team-img">
+                  <div class="content">
+                      <h2>Rajat Kabra</h2>
+                      <p>Sr. Events Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/rajat-kabra-9a202028a" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:23110268@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="Put Image here (won't be provided to you just leave it as it is)" alt="Manas Kalal"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Manas Kalal</h2>
+                      <p>Sr. Events Executive</p>
+                      <div class="icons">
+                          <a href="#" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:manas.kalal@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/Isha Agrawal - Isha Agrawal 23110139.jpg" alt="Isha Agrawal"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Isha Agrawal</h2>
+                      <p>Sr. Events Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/isha-agrawal-717877292" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:23110139@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/IMG_20231201_114543 - Aakash Kushwah.jpg" alt="Aakash Kushwah"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Aakash Kushwah</h2>
+                      <p>Sr. Events Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/aakash-kushwah-7b1a08297/" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:aakash.kushwah@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/IMG_4792 - Piyush Vishwakarma.jpg" alt="Piyush Vishwakarma" class="team-img">
+                  <div class="content">
+                      <h2>Piyush Vishwakarma</h2>
+                      <p>Sr. Events Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/piyush-vishwakarma-0960a5259" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:piyush.vishwakarma@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="Put Image here (won't be provided to you just leave it as it is)" alt="Tejas Patil"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Tejas Patil</h2>
+                      <p>Sr. Events Executive</p>
+                      <div class="icons">
+                          <a href="#" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:23110333@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/IMG_20230630_153853 - Pradeep Kumar Meena.jpg" alt="Pradeep Kumar Meena"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Pradeep Kumar Meena</h2>
+                      <p>Sr. Events Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/pradeep-k-54b77b25b" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:pradeep.meena@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/Photo_page-0001 - Parth Suryavanshi.jpg" alt="Parth Suryavanshi"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Parth Suryavanshi</h2>
+                      <p>Sr. Events Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/parth-suryavanshi-539234261" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:parth.suryavanshi@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/IMG20240509172003 - Prateek Takshak 23110256.jpg" alt="Prateek Takshak"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Prateek Takshak</h2>
+                      <p>Sr. Events Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/prateek-takshak-1440a928a" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:23110256@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/Mohit kumar yadav - Mohit Kumar Yadav 23110209.jpg" alt="Mohit Kumar Yadav"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Mohit Kumar Yadav</h2>
+                      <p>Sr. Events Executive</p>
+                      <div class="icons">
+                          <a href="http://www.linkedin.com/in/mohit-kumar-yadav-1930a828a" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:23110209@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="Put Image here (won't be provided to you just leave it as it is)" alt="Aditya Mehta"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Aditya Mehta</h2>
+                      <p>Sr. Events Executive</p>
+                      <div class="icons">
+                          <a href="#" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:mehta.aditya@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="Put Image here (won't be provided to you just leave it as it is)"
+                      alt="Goswami Aratiben Kanubharti" class="team-img">
+                  <div class="content">
+                      <h2>Goswami Aratiben Kanubharti</h2>
+                      <p>Sr. Events Executive</p>
+                      <div class="icons">
+                          <a href="#" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24520012@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/WhatsApp Image 2024-10-30 at 16.03.50_0dce948a - Praveen Rathod.jpg"
+                      alt="Praveen Rathod" class="team-img">
+                  <div class="content">
+                      <h2>Praveen Rathod</h2>
+                      <p>Sr. Events Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/praveen-rathod-a70813278" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:praveen.rathod@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="Put Image here (won't be provided to you just leave it as it is)" alt="Kandarp Jani"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Kandarp Jani</h2>
+                      <p>Sr. Events Executive</p>
+                      <div class="icons">
+                          <a href="#" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:kandarp.jani@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/Profile_Photo_2 - Rahulkumar Panchal.jpg" alt="Rahulkumar Panchal"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Rahulkumar Panchal</h2>
+                      <p>Sr. Events Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/rahulkumar-panchal/" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:rahulkumar.panchal@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="Put Image here (won't be provided to you just leave it as it is)" alt="Param Tanna"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Param Tanna</h2>
+                      <p>Jr. Events Executive</p>
+                      <div class="icons">
+                          <a href="#" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110236@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/Abhinav Thakur - Abhinav Thakur 24110007.jpg" alt="Abhinav Thakur"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Abhinav Thakur</h2>
+                      <p>Jr. Events Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/abhinav-thakur-387b00325" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110007@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="teamImages\Manish Prasad - Manish Kaushalendra Prasad 24120012.jpg" alt="Manish Prasad"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Manish Prasad</h2>
+                      <p>Jr. Events Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/vanshrastogi21" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24120012@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="Put Image here (won't be provided to you just leave it as it is)" alt="Saksham Chourasia"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Saksham Chourasia</h2>
+                      <p>Jr. Events Executive</p>
+                      <div class="icons">
+                          <a href="#" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110312@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="Put Image here (won't be provided to you just leave it as it is)" alt="Sughanthan S"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Sughanthan S</h2>
+                      <p>Jr. Events Executive</p>
+                      <div class="icons">
+                          <a href="#" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110357@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="Put Image here (won't be provided to you just leave it as it is)" alt="Sarthak Katiya"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Sarthak Katiya</h2>
+                      <p>Jr. Events Executive</p>
+                      <div class="icons">
+                          <a href="#" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110161@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/7B65E338-E9B0-4366-AA1D-59278C4F1EA6 - Dutt Parmar 24110115.jpeg"
+                      alt="Dutt Parmar" class="team-img">
+                  <div class="content">
+                      <h2>Dutt Parmar</h2>
+                      <p>Jr. Events Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/dutt-parmar-530630328/" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110115@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="Put Image here (won't be provided to you just leave it as it is)" alt="Pranav Ram R"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Pranav Ram R</h2>
+                      <p>Jr. Events Executive</p>
+                      <div class="icons">
+                          <a href="#" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110270@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/IMG_1735 - Aayush Mohan Bhagat 24110005.jpeg" alt="Aayush Mohan Bhagat"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Aayush Mohan Bhagat</h2>
+                      <p>Jr. Events Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/aayush-mohan-bhagat-176104329" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110005@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/Animesh - Animesh Das 24110040.jpg" alt="Animesh Das" class="team-img">
+                  <div class="content">
+                      <h2>Animesh Das</h2>
+                      <p>Jr. Events Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/animesh-das-0ab0b7326" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110040@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/Image 1 - Niraj Kumar 24110222.jpg" alt="Niraj Kumar" class="team-img">
+                  <div class="content">
+                      <h2>Niraj Kumar</h2>
+                      <p>Jr. Events Executive</p>
+                      <div class="icons">
+                          <a href="#" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110222@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="Put Image here (won't be provided to you just leave it as it is)" alt="Akshit Chhabra"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Akshit Chhabra</h2>
+                      <p>Jr. Events Executive</p>
+                      <div class="icons">
+                          <a href="#" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110026@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="Put Image here (won't be provided to you just leave it as it is)" alt="Hiranmay Mushahary"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Hiranmay Mushahary</h2>
+                      <p>Jr. Events Executive</p>
+                      <div class="icons">
+                          <a href="#" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:hiranmay.mushahary@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/IMG_20230803_165422_162 - Jigar Suratsang Mahedu 24520021.jpg"
+                      alt="Jigar Mahedu" class="team-img">
+                  <div class="content">
+                      <h2>Jigar Mahedu</h2>
+                      <p>Jr. Events Executive</p>
+                      <div class="icons">
+                          <a href="#" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24520021@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/20240608_151914 - Himanshu Poswal 24110135.jpg" alt="Himanshu Poswal"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Himanshu Poswal</h2>
+                      <p>Jr. Events Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/himanshu-poswal-31bbb6322" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110135@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/Chirag Agarwalla  - Chirag Agarwalla 24110093.jpg" alt="Chirag Agarwalla"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Chirag Agarwalla</h2>
+                      <p>Jr. Events Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/chirag-agarwalla" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110093@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="Put Image here (won't be provided to you just leave it as it is)" alt="Prachi Jindal"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Prachi Jindal</h2>
+                      <p>Jr. Events Executive</p>
+                      <div class="icons">
+                          <a href="#" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110264@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="./teamImages/Aditya Tater - Aditya Tater 24110013.jpg" alt="Aditya Tater"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Aditya Tater</h2>
+                      <p>Jr. Events Executive</p>
+                      <div class="icons">
+                          <a href="https://www.linkedin.com/in/aditya-tater-6745b2322" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110013@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="Put Image here (won't be provided to you just leave it as it is)" alt="Yash Choudhary"
+                      class="team-img">
+                  <div class="content">
+                      <h2>Yash Choudhary</h2>
+                      <p>Jr. Events Executive</p>
+                      <div class="icons">
+                          <a href="#" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110398@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card glow-box">
+                  <img src="Put Image here (won't be provided to you just leave it as it is)"
+                      alt="Piyush Kumar Keshri" class="team-img">
+                  <div class="content">
+                      <h2>Piyush Kumar Keshri</h2>
+                      <p>Jr. Events Executive</p>
+                      <div class="icons">
+                          <a href="#" target="_blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:24110260@iitgn.ac.in" target="_blank">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+  </div>
+  
+
+
+
+  </div class="footer">
+  <!-- Start Footer Area -->
+  <footer>
+    <div class="footer-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="footer-content">
+              <div class="footer-head">
+                <div class="footer-logo">
+                  <h2><span>E</span>II</h2>
+                </div>
+
+                <p>IIT Gandhinagar<br>Palaj, Gandhinagar - 382355<br>Gujarat, India</p>
+
+              </div>
+            </div>
+          </div>
+          <!-- end single footer -->
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="footer-content">
+              <div class="footer-head">
+                <h4>information</h4>
+                <div class="footer-contacts">
+                  <p><span>Contact Us: </span>
+                  <p> Rupak Banerjee <br></p>
+                  </p>
+                  <a href="mailto:rupak.banerjee@iitgn.ac.in" style="color:#444">rupak.banerjee@iitgn.ac.in</a> <br>
+                  <br>
+                  <p style="display: inline;"><span>Email Us: </span></p>
+                  <span><a href="mailto:eii@iitgn.ac.in" style="color:#444">eii@iitgn.ac.in</a> </span>
+                  <p>
+                    <span style="font-size: 30px;"><a href="https://www.facebook.com/EntrepreneurshipInitiativeIITGN/"
+                        target="_blank"><i class="fab fa-facebook-square"></a></i></span>
+                    &nbsp
+                    <span style="font-size: 30px;"><a href="https://www.instagram.com/eii_iitgandhinagar/"
+                        target="_blank"><i class="fab fa-instagram"></a></i></span>
+                    &nbsp
+                    <span style="font-size: 30px;"><a href="https://www.linkedin.com/company/eii/" target="_blank"><i
+                          class="fab fa-linkedin"></i></a></span>
+                  </p>
+                  <!-- <p><span>Facebook : <a href="https://www.facebook.com/EntrepreneurshipInitiativeIITGN/" target="_blank"><i class="fab fa-facebook-square"></a></i></span></p>
+                    <p><span>Linkedin : <a href="https://www.linkedin.com/company/eii/" target="_blank"><i class="fab fa-linkedin"></i></a></span></p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sub-div">
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <div class="footer-content">
+                <div class="footer-head">
+                  <h4>USEFUL LINKS</h4>
+                  <div class="footer-contacts">
+                    <p><a href="/home" style="font-weight: bold;">Home</a></p>
+                    <p><a href="#about" style="font-weight: bold;">About Us</a></p>
+                    <p><a href="/blog" style="font-weight: bold;">E-Cell Blog</a></p>
+                    <p><a href="/gallery" style="font-weight: bold;">Gallery</a></p>
+                    <p><a href="/contact" style="font-weight: bold;">Contact Us</a></p>
+                    <img src="./1.png" alt="" style="width: 10rem; height: 10rem; display: flex;">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  </footer>
+
+  <div class="footer-area-bottom">
     <div class="container">
       <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
-          <div class="section-headline text-center">
-            <h2>Our Team</h2>
+          <div class="footer-content text-center">
+            <p>© 2021 EII. All Rights Reserved. | Designed by <a
+                href="https://www.linkedin.com/in/harshita-ramchandani-1b1b3b1b3/" target="_blank">EII Team</a></p>
           </div>
         </div>
       </div>
-      <!-- <center>
-        <h3>Co-ordinators</h3>
-      </center>
-      <div class="row">
 
-        <div class="col-md-4 col-sm-4 col-xs-12">
-          <div class="">
-            <div class="team-content text-center">
-              <h6>Kevin Amit Shah</h6>
-              <p>Events coordinator</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 col-sm-4 col-xs-12">
-          <div class="">
-            <div class="team-content text-center">
-              <h6>Hetvi Patel</h6>
-              <p>E-Summit coordinator</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 col-sm-4 col-xs-12">
-          <div class="">
-            <div class="team-content text-center">
-              <h6>Madhav Biswam</h6>
-              <p>Marketing coordinator</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-      <br>
-      <br>
-
-      <center>
-        <h3>Website Management</h3>
-      </center>
-      <div class="row">
-        <div class="col-sm-4"></div>
-        <div class="team-top">
-          <div class="col-md-4">
-            <div class="">
-              <center>
-                <div class="team-img">
-                </div>
-              </center>
-              <div class="team-content text-center">
-                <h6>Harshita Ramchandani</h6>
-                <p>Web Developer</p>
-              </div>
-            </div>
-          </div> -->
-          <!-- End column -->
-        <!-- </div>
-      </div>
-      <br>
-      <br>  -->
-
-      <div class="our-team">
-        <div class="team-head">
-            <img src="./imgs/Rupak.jpg" alt="team1" class="team-img">
-            <div class="content">
-                <h2>Rupak Banerjee</h2>
-                <p>Overall Coordinator</p>
-                <div class="icons">
-                  <a href="https://www.linkedin.com/in/rupakbanerjee01" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                  </a>
-                  <a href="mailto:rupak.banerjee@iitgn.ac.in" target="_blank">
-                    <i class="fas fa-envelope"></i>
-                  </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="cards">
-          <div class="cards">
-            <div class="card">
-              <img src="./imgs/Siddhi Rajpurohit.jpg" alt="team2" class="team-img">
-              <div class="content">
-                  <h2>Siddhi Rajpurohit</h2>
-                  <p>General member</p>
-                  <div class="icons">
-                    <a href="https://www.linkedin.com/in/siddhi-rajpurohit-21085b229/" target="_blank">
-                      <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="mailto: rajpurohitsiddhi@iitgn.ac.in" target="_blank">
-                      <i class="fas fa-envelope"></i>
-                    </a>
-                  </div>
-              </div>
-        </div>
-
-        <div class="card">
-            <img src="./imgs/Krushnadweipayan Pradhan.jpg" alt="team2" class="team-img">
-            <div class="content">
-                <h2>Krushnadweipayan</h2>
-                <p>Events coordinator</p>
-                <div class="icons">
-                  <a href="https://www.linkedin.com/in/krushnadweipayan-pradhan-482103273/" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                  </a>
-                  <a href="mailto: kdpradhan55@gmail.com" target="_blank">
-                    <i class="fas fa-envelope"></i>
-                  </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="./imgs/ankit_singh.jpg" alt="team1" class="team-img">
-            <div class="content">
-                <h2>Ankit Singh</h2>
-                <p>Web & Technical Head</p>
-                <div class="icons">
-                  <a href="https://www.linkedin.com/in/ankit-singh-7049bb275/" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                  </a>
-                  <a href="mailto: singh.ankit@iitgn.ac.in" target="_blank">
-                    <i class="fas fa-envelope"></i>
-                  </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="./imgs/IMG_20240126_222840 - Harsh Gautam.jpg" alt="team2" class="team-img">
-            <div class="content">
-                <h2>Harsh Gautam</h2>
-                <p>Web & Technical</p>
-                <div class="icons">
-                  <a href="https://www.linkedin.com/in/harsh-gautam-b73574252/" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                  </a>
-                  <a href="mailto: 23120021@iitgn.ac.in" target="_blank">
-                    <i class="fas fa-envelope"></i>
-                  </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-          <img src="./imgs/Uday Shingrakhiya.jpg" alt="team2" class="team-img">
-          <div class="content">
-              <h2>Uday Shingrakhiya</h2>
-              <p>Design Head</p>
-              <div class="icons">
-                <a href="#">
-                  <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="mailto: 23120021@iitgn.ac.in" target="_blank">
-                  <i class="fas fa-envelope"></i>
-                </a>
-              </div>
-          </div>
-        </div>
-
-        <div class="card">
-            <img src="./imgs/Screenshot_2024-01-25-02-26-32-258-edit_com.whatsapp - Aakash Kushwah.jpg  " alt="team1" class="team-img">
-            <div class="content">
-                <h2>Aakash Kushwah</h2>
-                <p>General Member</p>
-                <div class="icons">
-                  <a href="https://www.linkedin.com/in/aakash-kushwah-7b1a08297/" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                  </a>
-                  <a href="mailto: aakash.kushwah@iitgn.ac.in", target="_blank">
-                    <i class="fas fa-envelope"></i>
-                  </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-                <img src="./imgs/me - Kaushik Chowhan 23110161.jpg" alt="team3" class="team-img">
-                <div class="content">
-                    <h2>Kaushik Chowhan</h2>
-                    <p>Design</p>
-                    <div class="icons">
-                      <a href="https://www.linkedin.com/in/kaushik-chowhan-b59aa0264/" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                      </a>
-                      <a href="mailto:23110161@iitgn.ac.in" target="_blank">
-                        <i class="fas fa-envelope"></i>
-                      </a>
-                    </div>
-                </div>
-        </div>
-
-        <div class="card">
-                <img src="./imgs/lakshya.jpg" alt="team3" class="team-img">
-                <div class="content">
-                    <h2>Lakshya</h2>
-                    <p>Design</p>
-                    <div class="icons">
-                      <a href="https://www.linkedin.com/in/lakshya-kesarwani-2563a82a3/" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                      </a>
-                      <a href="mailto: 23110187@iitgn.ac.in" target="_blank">
-                        <i class="fas fa-envelope"></i>
-                      </a>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-              <img src="./imgs/harshkesari.png" alt="team3" class="team-img">
-              <div class="content">
-                  <h2>Harsh Keshri</h2>
-                  <p>Design</p>
-                  <div class="icons">
-                    <a href="#">
-                      <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="mailto: 23110217@iitgn.ac.in" target="_blank">
-                      <i class="fas fa-envelope"></i>
-                    </a>
-                  </div>
-              </div>
-            </div>
-            <div class="card">
-              <img src="./imgs/rajdeep.jpg" alt="team3" class="team-img">
-              <div class="content">
-                  <h2>Rajdeep Vraj</h2>
-                  <p>Media & Events</p>
-                  <div class="icons">
-                    <a href="#">
-                      <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="mailto: rajdeep.vraj@iitgn.ac.in" target="_blank">
-                      <i class="fas fa-envelope"></i>
-                    </a>
-                  </div>
-              </div>
-          </div>
-            <div class="card">
-                <img src="./imgs/IMG_0520 - Darshil Bhansali 23110086.jpeg" alt="team3" class="team-img">
-                <div class="content">
-                    <h2>Darshil Bhansali</h2>
-                    <p>Media & Events</p>
-                    <div class="icons">
-                      <a href="https://www.linkedin.com/in/darshil-bhansali-675215292/" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                      </a>
-                      <a href="23110086@iitgn.ac.in" target="_blank">
-                        <i class="fas fa-envelope"></i>
-                      </a>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./imgs/Raghav pic after enhancement - Raghav Gopal Mudigonda 23110262.jpg" alt="team3" class="team-img">
-                <div class="content">
-                    <h2>Raghav Gopal</h2>
-                    <p>Media & Events</p>
-                    <div class="icons">
-                      <a href="https://www.linkedin.com/in/raghavgopalm" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                      </a>
-                      <a href="mailto:23110262@iitgn.ac.in" target="_blank">
-                        <i class="fas fa-envelope"></i>
-                      </a>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./imgs/7f5c0af7-c1d1-4df8-973f-99d4a2141f5a - Yug Verma 23110371.jpeg" alt="team3" class="team-img">
-                <div class="content">
-                    <h2>Yug Verma</h2>
-                    <p>Media & Events</p>
-                    <div class="icons">
-                      <a href="http://linkedin.com/in/yug-verma-1930a928a" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                      </a>
-                      <a href="mailto: 23110371@iitgn.ac.in" target="_blank">
-                        <i class="fas fa-envelope"></i>
-                      </a>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-              <img src="./imgs/garima.jpg" alt="team3" class="team-img">
-              <div class="content">
-                  <h2>Garima Nama</h2>
-                  <p>Public Relations</p>
-                  <div class="icons">
-                    <a href="https://www.linkedin.com/in/garimanama/" target="_blank">
-                      <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="mailto: garima.nama@iitgn.ac.in" target="_blank">
-                      <i class="fas fa-envelope"></i>
-                    </a>
-                  </div>
-              </div>
-          </div>
-          <div class="card">
-            <img src="./imgs/Snapchat-728304745 - Vansh Rastogi 23110352.jpg" alt="team3" class="team-img">
-            <div class="content">
-                <h2>Vansh Rastogi</h2>
-                <p>Public Relations</p>
-                <div class="icons">
-                  <a href="https://www.linkedin.com/in/vansh-rastogi-0b482a287/" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                  </a>
-                  <a href="mailto: 23110352@iitgn.ac.in" target="_blank">
-                    <i class="fas fa-envelope"></i>
-                  </a>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-          <img src="./imgs/Screenshot_2024-01-28-12-16-40-22_1c337646f29875672b5a61192b9010f9 - Surriya G.jpg" alt="team3" class="team-img">
-          <div class="content">
-              <h2>Surriya Gokul</h2>
-              <p>Public Relations</p>
-              <div class="icons">
-                <a href="https://www.linkedin.com/in/surriya-gokul-401aa42ab/" target="_blank">
-                  <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="mailto: 23110324@iitgn.ac.in" target="_blank">
-                  <i class="fas fa-envelope"></i>
-                </a>
-              </div>
-          </div>
-      </div>
-          <div class="card">
-            <img src="./imgs/IMG_0525 - Raina Jain.jpeg" alt="team3" class="team-img">
-            <div class="content">
-                <h2>Raina Jain</h2>
-                <p>Public Relations</p>
-                <div class="icons">
-                  <a href="https://www.linkedin.com/in/rainajainbow/" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                  </a>
-                  <a href="mailto: raina.jain@iitgn.ac.in" target="_blank">
-                    <i class="fas fa-envelope"></i>
-                  </a>
-                </div>
-            </div>
-        </div>
-      <div class="card">
-        <img src="./imgs/Profile - Mohammad Rashid Pathan.png" alt="team3" class="team-img">
-        <div class="content">
-            <h2>Rashid Pathan</h2>
-            <p>General Member</p>
-            <div class="icons">
-              <a href="https://www.linkedin.com/in/mohammadrashid-pathan" target="_blank ">
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a href="mailto: mohammadrashid.pathan@iitgn.ac.in" target="_blank">
-                <i class="fas fa-envelope"></i>
-              </a>
-            </div>
-        </div>
-    </div>
-    <div class="card">
-      <img src="./imgs/atharva.jpg" alt="team3" class="team-img">
-      <div class="content">
-          <h2>Atharva Zagade</h2>
-          <p>General Member</p>
-          <div class="icons">
-            <a href="https://www.linkedin.com/in/atharva-zagade-74313a28a/" target="_blank">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="mailto: 23110372@iitgn.ac.in" target="_blank">
-              <i class="fas fa-envelope"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <img src="./imgs/IMG_4711 - Yashvi Kothiya.jpeg" alt="team3" class="team-img">
-        <div class="content">
-            <h2>Yashvi Kothiya</h2>
-            <p>General Member</p>
-            <div class="icons">
-              <a href="https://www.linkedin.com/in/yashvi-kothiya-30401b28a"> 
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a href="mailto: 23110369@iitgn.ac.in" target="_blank">
-                <i class="fas fa-envelope"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="./imgs/IMG_0360 - Dhruv Shah.jpeg" alt="team3" class="team-img">
-          <div class="content">
-              <h2>Dhruv Shah</h2>
-              <p>General Member</p>
-              <div class="icons">
-                <a href="#">
-                  <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="mailto: 23110294@iitgn.ac.in" target="_blank">
-                  <i class="fas fa-envelope"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <img src="./imgs/IMG-20231105-WA0073 - Anirudh Mittal 23110029.jpg" alt="team3" class="team-img">
-            <div class="content">
-                <h2>Anirudh Mittal</h2>
-                <p>General Member</p>
-                <div class="icons">
-                  <a href="https://www.linkedin.com/in/anirudh-mittal-8b353128b/" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                  </a>
-                  <a href="mailto: 23110029@iitgn.ac.in" target="_blank">
-                    <i class="fas fa-envelope"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <img src="./imgs/IMG-20231224-WA0075 - Anurag Singh 23110035.jpg" alt="team3" class="team-img">
-              <div class="content">
-                  <h2>Anurag Singh</h2>
-                  <p>General Member</p>
-                  <div class="icons">
-                    <a href="https://www.linkedin.com/in/anurag-singh-02b0a7290/" target="_blank">
-                      <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="mailto: 23110035@iitgn.ac.in " target="_blank">
-                      <i class="fas fa-envelope"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <img src="./imgs/20231209_160740716_iOS - Manmohan Singh Meena 23110198.jpeg" alt="team3" class="team-img">
-                <div class="content">
-                    <h2>Manmohan Singh</h2>
-                    <p>General Member</p>
-                    <div class="icons">
-                      <a href="https://www.linkedin.com/in/manmohan-singh-meena-b879472b2/" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                      </a>
-                      <a href="mailto: 23110198@iitgn.ac.in" target="_blank">
-                        <i class="fas fa-envelope"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-<<<<<<< HEAD
-      
-          </div>
-    </div>
-    </div>
-    </div>
-  </div>        
-
-
-      
-=======
-        </div>
-      </div>
-    </div>
->>>>>>> 81190c403cc3205d1d27c260ce909207e5881e3d
-
-  </div class="footer">     
-    <!-- Start Footer Area -->
-    <footer>
-      <div class="footer-area">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4 col-sm-4 col-xs-12">
-              <div class="footer-content">
-                <div class="footer-head">
-                  <div class="footer-logo">
-                    <h2><span>E</span>II</h2>
-                  </div>
-  
-                  <p>IIT Gandhinagar<br>Palaj, Gandhinagar - 382355<br>Gujarat, India</p>
-  
-                </div>
-              </div>
-            </div>
-            <!-- end single footer -->
-            <div class="col-md-4 col-sm-4 col-xs-12">
-              <div class="footer-content">
-                <div class="footer-head">
-                  <h4>information</h4>
-                  <div class="footer-contacts">
-                    <p><span>Contact Us: </span>
-                      <p> Rupak Banerjee <br>
-                         rupak.banerjee@iitgn.ac.in 
-                       </p>
-                        <br>
-                    </p>
-                    <p><span>Email Us: </span>eii@iitgn.ac.in</p>
-                    <p>
-                      <span style="font-size: 30px;"><a href="https://www.facebook.com/EntrepreneurshipInitiativeIITGN/"
-                          target="_blank"><i class="fab fa-facebook-square"></a></i></span>
-                      &nbsp
-                      <span style="font-size: 30px;"><a href="https://www.instagram.com/eii_iitgandhinagar/"
-                          target="_blank"><i class="fab fa-instagram"></a></i></span>
-                      &nbsp
-                      <span style="font-size: 30px;"><a href="https://www.linkedin.com/company/eii/" target="_blank"><i
-                            class="fab fa-linkedin"></i></a></span>
-                    </p>
-                    <!-- <p><span>Facebook : <a href="https://www.facebook.com/EntrepreneurshipInitiativeIITGN/" target="_blank"><i class="fab fa-facebook-square"></a></i></span></p>
-                    <p><span>Linkedin : <a href="https://www.linkedin.com/company/eii/" target="_blank"><i class="fab fa-linkedin"></i></a></span></p> -->
-                  </div>
-                </div>
-              </div>
-            </div>
-  
-            <div class="sub-div">
-              <div class="col-md-4 col-sm-4 col-xs-12">
-                <div class="footer-content">
-                  <div class="footer-head">
-                    <h4>USEFUL LINKS</h4>
-                    <div class="footer-contacts">
-                      <p><a href="/home" style="font-weight: bold;">Home</a></p>
-                      <p><a href="#about" style="font-weight: bold;">About Us</a></p>
-                      <p><a href="/blog" style="font-weight: bold;">E-Cell Blog</a></p>
-                      <p><a href="/gallery" style="font-weight: bold;">Gallery</a></p>
-                      <p><a href="/contact" style="font-weight: bold;">Contact Us</a></p>
-                      <img src="./1.png" alt="" style="width: 10rem; height: 10rem; display: flex;">
-                    </div>
-                  </div>
-                </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <div class="footer-area-bottom">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 col-sm-12 col-xs-12">
-            <div class="footer-content text-center">
-              <p>© 2021 EII. All Rights Reserved. | Designed by <a href="https://www.linkedin.com/in/harshita-ramchandani-1b1b3b1b3/"
-                  target="_blank">EII Team</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
 
     <!-- End Footer Area -->
     <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
@@ -801,6 +1996,50 @@
     <script src="contactform/contactform.js"></script>
 
     <script src="js/main.js"></script>
+
+
+    <script>
+      function showContent(tabId, tabButton) {
+          // Hide all content
+          const contents = document.querySelectorAll('.team-content');
+          contents.forEach(content => content.classList.remove('active-team-content'));
+
+          // Remove active class from all tabs
+          const tabs = document.querySelectorAll('.team-tab-button');
+          tabs.forEach(tab => tab.classList.remove('active-team-button'));
+
+          // Show the selected content
+          document.getElementById(tabId).classList.add('active-team-content');
+
+          // Add active class to the clicked tab
+          tabButton.classList.add('active-team-button');
+          localStorage.setItem('activeTab', tabId);
+      }
+      // Load the last active tab from localStorage or default to 'coordinators'
+      document.addEventListener('DOMContentLoaded', () => {
+          const activeTab = localStorage.getItem('activeTab') || 'coordinators';
+          const activeButton = document.querySelector(`.team-tab-button[onclick*="${activeTab}"]`);
+          showContent(activeTab, activeButton);
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+          // Select all elements with the 'card' class
+          const cards = document.querySelectorAll(".card");
+
+          // Loop through each card and add the 'glow-box' class
+          cards.forEach(card => {
+              card.classList.add("glow-box");
+          });
+      });
+
+  </script>
+
+    <!-- Script for navbar -->
+    <script src="js/navbar.js"></script>
+
+<!-- Script for slideshow -->
+<script src="js/slideshow.js"></script>
+
 </body>
 
 </html>
