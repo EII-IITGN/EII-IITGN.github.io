@@ -4,12 +4,32 @@
   /*--------------------------
   preloader
   ---------------------------- */
+  
+  /* For gif
   $(window).on('load', function() {
     var pre_loader = $('#preloader');
     pre_loader.fadeOut('slow', function() {
       $(this).remove();
     });
-  });
+  });*/
+  $(document).ready(function() {
+    var startTime = new Date().getTime();
+
+    $(window).on('load', function() {
+        var loadTime = new Date().getTime();
+        var elapsedTime = loadTime - startTime;
+
+        // Ensure that the minimum display time is 0.1 second
+        var remainingTime = 100 - elapsedTime;
+
+        setTimeout(function() {
+            $('#preloader').fadeOut('slow', function() {
+                $(this).remove();
+            });
+        }, remainingTime > 0 ? remainingTime : 0);
+    });
+});
+
 
   /*---------------------
    TOP Menu Stick

@@ -213,8 +213,8 @@ input, select, textarea, input[type="text"], input[type="date"], input[type="url
   -moz-appearance: none;
   box-shadow: none !important;
 }
-
-div#preloader {
+/* for gif css
+#preloader {
   position: fixed;
   left: 0;
   top: 0;
@@ -223,7 +223,50 @@ div#preloader {
   height: 100%;
   overflow: visible;
   background: #fff url('../img/preloader.gif') no-repeat center center;
+} */
+#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
 }
+
+#logo-svg {
+  width: 100px;
+  height: 100px;
+  animation: scalePulse 2s infinite ease-in-out;
+}
+
+@keyframes scalePulse {
+  0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+  50% {
+      transform: scale(1.1);
+      opacity: 0.8;
+  }
+}
+
+circle {
+  animation: bounce 1s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% {
+      cy: 30;
+  }
+  50% {
+      cy: 20;
+  }
+}
+
 
 ::-moz-selection {
   background: #3EC1D5;
