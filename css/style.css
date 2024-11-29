@@ -1079,6 +1079,103 @@ circle {
   color: #777;
 }
 
+
+/*----------------------------------------*/
+.mentor-content {
+  display: none;
+  padding: 20px;
+}
+
+.mentor-content .glow-box:hover {
+  box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3), 0 4px 30px rgba(0, 102, 255, 0.2);
+}
+
+.icons {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+.mentor-content {
+  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+
+}
+
+
+.mentor-content .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+.mentor-content h1 {
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  color: cornflowerblue;
+}
+
+
+.mentor-content .card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: .3s;
+  width: 22em;
+  height: 27.5em;
+  background-size: cover;
+  background-position: center;
+  margin: 1.5rem auto;
+}
+
+.mentor-content .card img {
+  width: 100%;
+  height: 17.5em;
+  background-position: center;
+  object-fit: cover;
+  transition: .3s;
+}
+
+.mentor-content .card:hover img {
+  transform: scale(1.05);
+}
+
+.mentor-content .card .content {
+  padding: 20px;
+  text-align: center;
+}
+
+.mentor-content .card .content h2 {
+  font-weight: bold;
+  font-size: 2rem;
+  padding-bottom: 2rem;
+  margin: 0;
+}
+
+.mentor-content .card .content p {
+  padding-bottom: 0%; 
+  font-size: 1.5rem;
+  margin: 6px 1 0;
+  color: #777;
+}
+
+
+
+
+
 /*--------------------------------*/
 
 /*  9.review Area
