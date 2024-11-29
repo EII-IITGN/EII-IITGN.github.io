@@ -1149,7 +1149,22 @@ circle {
 /*----------------------------------------
  10.Portfolio Area Css
 ----------------------------------------*/
+@media (max-width: 1000px) {
+  .team-member img {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
 
+  .team-member h4 {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
 .pst-content {
   padding-left: 10px;
 }
