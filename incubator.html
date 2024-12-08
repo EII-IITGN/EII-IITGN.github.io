@@ -45,20 +45,24 @@
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
-<!-- Stylesheet for slideshow -->
-    <link rel="stylesheet" href="css/slideshowStyle87.css">
+  <!-- Stylesheet for slideshow -->
+  <link rel="stylesheet" href="css/slideshowStyle87.css">
 
   <!-- Stylesheet for navbar -->
   <link rel="stylesheet" href="css/navbarStyles.css">
 
 
   <style>
-
     html {
       scroll-behavior: smooth;
       overflow-x: hidden;
     }
 
+    /* .our-team-area{
+      margin: 0;
+      background-image: linear-gradient(to bottom, #2b7bd0, #80ccff, #80c2e5, white);
+      background-repeat: no-repeat;
+    } */
 
     #gallery {
       padding: 10px 0 0 10px;
@@ -76,8 +80,8 @@
       overflow: hidden;
       cursor: pointer;
       border: 10px solid #fff;
-      border-radius: 5px;
-      box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
     }
 
     .modal {
@@ -93,11 +97,32 @@
     #modal-image {
       margin: 0 auto;
       max-width: 100%;
-      border-radius: 5px;
+      border-radius: 10px;
     }
 
     .modal-image-caption {
       text-transform: capitalize;
+    }
+
+    .thumbnail-custom {
+      aspect-ratio: 1;
+      width: 220px;
+      /* max-width: 220px; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      border: 2px solid black;
+      background-image: radial-gradient(#ebf7fa, #83bff3, #2077c3);
+      border-radius: 20px;
+    }
+
+    .container-padding {
+      padding: 5px;
+    }
+
+    .marg {
+      margin-bottom: 2rem;
     }
   </style>
 
@@ -107,30 +132,30 @@
 
   <div id="preloader">
     <svg id="logo-svg" width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-        <!-- "E" structure -->
-        <rect x="40" y="40" width="20" height="120" fill="#1f4f9a" /> <!-- Vertical bar of "E" -->
-        <rect x="60" y="40" width="60" height="20" fill="#1f4f9a" /> <!-- Top horizontal bar of "E" -->
-        <rect x="60" y="90" width="40" height="20" fill="#1f4f9a" /> <!-- Middle horizontal bar of "E" -->
-        <rect x="60" y="140" width="60" height="20" fill="#1f4f9a" /> <!-- Bottom horizontal bar of "E" -->
+      <!-- "E" structure -->
+      <rect x="40" y="40" width="20" height="120" fill="#1f4f9a" /> <!-- Vertical bar of "E" -->
+      <rect x="60" y="40" width="60" height="20" fill="#1f4f9a" /> <!-- Top horizontal bar of "E" -->
+      <rect x="60" y="90" width="40" height="20" fill="#1f4f9a" /> <!-- Middle horizontal bar of "E" -->
+      <rect x="60" y="140" width="60" height="20" fill="#1f4f9a" /> <!-- Bottom horizontal bar of "E" -->
 
-        <!-- First "I" structure -->
-        <rect x="130" y="40" width="20" height="120" fill="#1f4f9a" />
+      <!-- First "I" structure -->
+      <rect x="130" y="40" width="20" height="120" fill="#1f4f9a" />
 
-        <!-- Second "I" structure -->
-        <rect x="160" y="40" width="20" height="120" fill="#1f4f9a" />
+      <!-- Second "I" structure -->
+      <rect x="160" y="40" width="20" height="120" fill="#1f4f9a" />
 
-        <!-- Dot above the first "I" -->
-        <circle cx="140" cy="30" r="12" fill="#1f4f9a" />
+      <!-- Dot above the first "I" -->
+      <circle cx="140" cy="30" r="12" fill="#1f4f9a" />
 
-        <!-- Dot above the second "I" -->
-        <circle cx="170" cy="30" r="12" fill="#1f4f9a" />
+      <!-- Dot above the second "I" -->
+      <circle cx="170" cy="30" r="12" fill="#1f4f9a" />
     </svg>
-</div>
+  </div>
 
   <header>
     <!-- header-area start -->
     <div id="sticker" class="header-area" style="height: 70px;">
-      <div class="container">
+      <div class="container container-padding">
         <div class="row">
           <div class="col-md-12 col-sm-12">
 
@@ -138,8 +163,8 @@
             <nav class="navbar navbar-default" style="background-color:transparent; border: none;">
               <!-- Brand and toggle get grouped for better mobile display -->
               <div class="navbar-header">
-                <button type="button" class="navbar-toggle"
-                  aria-expanded="false" onclick="openNav()" style="z-index: 120">
+                <button type="button" class="navbar-toggle" aria-expanded="false" onclick="openNav()"
+                  style="z-index: 120">
                   <span class="sr-only">Toggle navigation</span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
@@ -185,44 +210,44 @@
     <!-- header-area end -->
   </header>
   <!-- header end -->
+  <!-- Start Slider Area -->
+  <div id="home" class="slider-area">
+    <div class="container87">
+      <div class="controls87" id="goLeft" onclick="fn_goLeftClicked()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+        </svg>
+      </div>
+      <div class="controls87" id="goRight" onclick="fn_goRightClicked()"><svg xmlns="http://www.w3.org/2000/svg"
+          width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+        </svg></div>
+      <!-- <div class="currentSlideIndicatorsContainer" id="currentSlideIndicatorsContainer"></div> -->
+      <div class="slideshow87" id="slideshow87">
+        <div class="slides87">
+          <img class="slidesImg87" src="./img/slider/incubator/slider1.jpg"></img>
+          <div class="slidesText87">Nurturing</div>
+        </div>
+        <div class="slides87">
+          <img class="slidesImg87" src="./img/slider/incubator/slider2.jpg"></img>
+          <div class="slidesText87">Cultivation</div>
+        </div>
+        <div class="slides87">
+          <img class="slidesImg87" src="./img/slider/incubator/slider3.jpg"></img>
+          <div class="slidesText87">Launchpad</div>
+        </div>
+      </div>
+    </div>
 
- <!-- Start Slider Area -->
- <div id="home" class="slider-area">
-  <div class="container87">
-    <div class="controls87" id="goLeft" onclick="fn_goLeftClicked()">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left"
-        viewBox="0 0 16 16">
-        <path fill-rule="evenodd"
-          d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
-      </svg>
-    </div>
-    <div class="controls87" id="goRight" onclick="fn_goRightClicked()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-      <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
-    </svg></div>
-    <!-- <div class="currentSlideIndicatorsContainer" id="currentSlideIndicatorsContainer"></div> -->
-    <div class="slideshow87" id="slideshow87">
-      <div class="slides87">
-        <img class="slidesImg87" src="./img/slider/incubator/slider1.jpg"></img>
-        <div class="slidesText87">Nurturing</div>
-      </div>
-      <div class="slides87">
-        <img class="slidesImg87" src="./img/slider/incubator/slider2.jpg"></img>
-        <div class="slidesText87">Cultivation</div>
-      </div>
-      <div class="slides87">
-        <img class="slidesImg87" src="./img/slider/incubator/slider3.jpg"></img>
-        <div class="slidesText87">Launchpad</div>
-      </div>
-    </div>
   </div>
-
-</div>
-<!-- End Slider Area -->
-<!-- End Slider Area -->
-
+  <!-- End Slider Area -->
+  <!-- End Slider Area -->
 
   <div id="team" class="our-team-area area-padding">
-    <div class="container">
+    <div class="container container-padding">
       <div class="row" style="margin-top: 20px">
         <div class="col-md-12 col-sm-12 col-xs-12">
           <div class="section-headline text-center">
@@ -247,6 +272,7 @@
           </p>
         </div>
       </div>
+
       <div class="row" style="margin-top: 20px">
         <div class="col-md-12 col-sm-12 col-xs-12">
           <div class="section-headline text-center">
@@ -256,22 +282,29 @@
       </div>
 
       <div class="row">
-        <p style="text-align: justify;">IIT Gandhinagar Innovation and Entrepreneurship Center (IIEC) is a company
-          incorporated under Section 8 of the Companies Act 2013 is promoted by IIT Gandhinagar to implement the overall
-          strategy of incubation, IP management, commercialization and to implement entrepreneurship and innovation
-          development programs.</p>
-        <p style="text-align: justify;">&nbsp;</p>
-        <p style="text-align: justify;">IIEC is industriously determined to assist the innovative ideas from both
-          students and faculties to become reality which can make commercial success and social impact. IIEC is
-          currently incubating companies started by its alumni and is open to incubating any technology startup from
-          outside the IIGN community. Apart from space and infrastructure for technology development and venture
-          creation, the incubation center also provides mentoring, connectivity to professionals investors, and business
-          networks, and limited financing. &nbsp;Incubation center connect them to right mentors to develop and scale up
-          their technology or products and identify their market, for legal and intellectual property related guidance
-          apart from helping incubatees financially.&nbsp;</p>
-        <p>&nbsp;</p>
-        <p align="justify">IIEC is creating around 10,000 sq ft furnished office space, tinkering labs, Prototype
-          development center etc. on the campus of IIT Gandhinagar at Palaj</p>
+        <div class="col-md-12 col-sm-12">
+          <p style="text-align: justify;">IIT Gandhinagar Innovation and Entrepreneurship Center (IIEC) is a company
+            incorporated under Section 8 of the Companies Act 2013 is promoted by IIT Gandhinagar to implement the
+            overall
+            strategy of incubation, IP management, commercialization and to implement entrepreneurship and innovation
+            development programs.</p>
+          <p style="text-align: justify;">&nbsp;</p>
+          <p style="text-align: justify;">IIEC is industriously determined to assist the innovative ideas from both
+            students and faculties to become reality which can make commercial success and social impact. IIEC is
+            currently incubating companies started by its alumni and is open to incubating any technology startup from
+            outside the IIGN community. Apart from space and infrastructure for technology development and venture
+            creation, the incubation center also provides mentoring, connectivity to professionals investors, and
+            business
+            networks, and limited financing. &nbsp;Incubation center connect them to right mentors to develop and
+            scale
+            up
+            their technology or products and identify their market, for legal and intellectual property related
+            guidance
+            apart from helping incubatees financially.&nbsp;</p>
+          <p>&nbsp;</p>
+          <p align="justify">IIEC is creating around 10,000 sq ft furnished office space, tinkering labs, Prototype
+            development center etc. on the campus of IIT Gandhinagar at Palaj</p>
+        </div>
       </div>
 
       <div class="row" style="margin-top: 20px">
@@ -282,32 +315,40 @@
         </div>
       </div>
 
+
       <div class="row">
-        <p style="text-align: justify;"><span>IIEC assist the innovative ideas from students, faculties from IITGn
-            community as well as motivated professional from outside &nbsp;to become reality which can make commercial
-            success and social impact. IIT Gandhinagar incubation center is currently incubating companies started by
-            its alumni and is open to incubating companies from outside. Its incubation facilities in the upcoming new
-            campus include wet and dry labs and rapid prototyping infrastructure (hardware and software) to support high
-            technology start-ups. Apart from space and development infrastructure, the incubation center also provides
-            mentoring, connectivity to professionals investors, and business networks, and limited financing Incubation
-            center connect them to right mentors to develop and scale up their technology or products and identify their
-            market, for legal and intellectual property related guidance apart from helping incubatees
-            financially.</span></p>
-        <p style="text-align: justify;">Programs:</p>
-        <p style="text-align: justify;"><strong>Explorer Member Program</strong> for supporting individuals who have
-          interest in working on their ideas to create a commercial venture but not yet ready for incubation. It
-          provides a co-working space to such individuals and supports by providing access to the ecosystem with
-          different entrepreneurial activities and exposing them to different aspects of technology development and
-          business planning. Currently 2 teams of IITGN alumni are availing the facility.</p>
-        <p style="text-align: justify;"><strong>Incubation&nbsp;</strong>for startups with proof of concept. IIEC
-          provides office space and infrastructure, mentoring, networking, access to finance to validate the idea, gain
-          initial costumers and start revenue generation.</p>
-        <p style="text-align: justify;">If you feel you have a great technology to make a viable business, just walk in.
-          We will provide the right ecosystem and support to bring the technology to market.</p>
-        <p style="text-align: justify;"><strong><span>Get in touch with us to know more.</span></strong></p>
-        <h3>
-          <center>Know More: <a href="https://iieciitgn.com">https://iieciitgn.com</a></center>
-        </h3>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <p style="text-align: justify;"><span>IIEC assist the innovative ideas from students, faculties from IITGn
+              community as well as motivated professional from outside &nbsp;to become reality which can make commercial
+              success and social impact. IIT Gandhinagar incubation center is currently incubating companies started by
+              its alumni and is open to incubating companies from outside. Its incubation facilities in the upcoming new
+              campus include wet and dry labs and rapid prototyping infrastructure (hardware and software) to support
+              high
+              technology start-ups. Apart from space and development infrastructure, the incubation center also provides
+              mentoring, connectivity to professionals investors, and business networks, and limited financing
+              Incubation
+              center connect them to right mentors to develop and scale up their technology or products and identify
+              their
+              market, for legal and intellectual property related guidance apart from helping incubatees
+              financially.</span></p>
+          <p style="text-align: justify;">Programs:</p>
+          <p style="text-align: justify;"><strong>Explorer Member Program</strong> for supporting individuals who have
+            interest in working on their ideas to create a commercial venture but not yet ready for incubation. It
+            provides a co-working space to such individuals and supports by providing access to the ecosystem with
+            different entrepreneurial activities and exposing them to different aspects of technology development and
+            business planning. Currently 2 teams of IITGN alumni are availing the facility.</p>
+          <p style="text-align: justify;"><strong>Incubation&nbsp;</strong>for startups with proof of concept. IIEC
+            provides office space and infrastructure, mentoring, networking, access to finance to validate the idea,
+            gain
+            initial costumers and start revenue generation.</p>
+          <p style="text-align: justify;">If you feel you have a great technology to make a viable business, just walk
+            in.
+            We will provide the right ecosystem and support to bring the technology to market.</p>
+          <p style="text-align: justify;"><strong><span>Get in touch with us to know more.</span></strong></p>
+          <h3>
+            <center>Know More: <a href="https://iieciitgn.com">https://iieciitgn.com</a></center>
+          </h3>
+        </div>
       </div>
 
       <div class="row" style="margin-top: 20px">
@@ -319,141 +360,145 @@
       </div>
     </div>
     <!-- images-->
-    <div class="container">
+    <div class="container container-padding">
       <div class="row">
-        <div class="col-md-4">
-          <div class="thumbnail" style="border: none;">
-            <img src="img/incubation/reorigin.jpg" alt="Lights" style="width:50%">
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
+            <img src="img/incubation/reorigin.jpg" alt="Lights" style="width:70%">
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="thumbnail" style="border: none;">
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
             <img src="img/incubation/4Dea.png" alt="Lights" style="width:50%">
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="thumbnail" style="border: none;">
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
             <img src="img/incubation/a_courtside.jpg" alt="Lights" style="width:50%">
           </div>
         </div>
 
       </div>
     </div>
-    <div class="container">
+    <div class="container container-padding">
       <div class="row">
-      </div>
-      <div class="col-md-4">
-        <div class="thumbnail" style="border: none;">
-          <img src="img/incubation/a_fluttr.jpg" alt="Lights" style="width:50%">
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
+            <img src="img/incubation/a_fluttr.jpg" alt="Lights" style="width:50%">
+          </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="thumbnail" style="border: none;">
-          <img src="img/incubation/cretif_256_black.jpg" alt="Lights" style="width:50%">
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
+            <img src="img/incubation/cretif_256_black.jpg" alt="Lights" style="width:50%">
+          </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="thumbnail" style="border: none;">
-          <img src="img/incubation/a_fundamine.png" alt="Lights" style="width:50%">
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
+            <img src="img/incubation/a_fundamine.png" alt="Lights" style="width:50%">
+          </div>
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container container-padding">
       <div class="row">
-        <div class="col-md-4">
-          <div class="thumbnail" style="border: none;">
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
             <img src="img/incubation/a_snapper.png" alt="Lights" style="width:40%">
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="thumbnail" style="border: none;">
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
             <img src="img/incubation/a_studio.png" alt="Lights" style="width:50%">
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="thumbnail" style="border: none;">
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
             <img src="img/incubation/a_sva.jpg" alt="Lights" style="width:50%">
           </div>
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container container-padding">
       <div class="row">
-        <div class="col-md-4">
-          <div class="thumbnail" style="border: none;">
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
             <img src="img/incubation/a_townrush.jpg" alt="Lights" style="width:50%">
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="thumbnail" style="border: none;">
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
             <img src="img/incubation/a_workernaka.jpg" alt="Lights" style="width:50%">
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="thumbnail" style="border: none;">
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
             <img src="img/incubation/Agrocast.jpg" alt="Lights" style="width:50%">
           </div>
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container container-padding">
       <div class="row">
-        <div class="col-md-4">
-          <div class="thumbnail" style="border: none;">
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
             <img src="img/incubation/atoforest.jpg" alt="Lights" style="width:50%">
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="thumbnail" style="border: none;">
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
             <img src="img/incubation/a_sc_batching.jpg" alt="Lights" style="width:50%">
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="thumbnail" style="border: none;">
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
             <img src="img/incubation/Dribble.png" alt="Lights" style="width:50%">
           </div>
         </div>
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="thumbnail" style="border: none;">
-              <img src="img/incubation/geo-carte_1.png" alt="Lights" style="width:50%">
-            </div>
+    </div>
+    <div class="container container-padding">
+      <div class="row">
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
+            <img src="img/incubation/geo-carte_1.png" alt="Lights" style="width:50%">
           </div>
-          <div class="col-md-4">
-            <div class="thumbnail" style="border: none;">
-              <img src="img/incubation/grid ants.png" alt="Lights" style="width:50%">
-            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
+            <img src="img/incubation/grid ants.png" alt="Lights" style="width:50%">
           </div>
-          <div class="col-md-4">
-            <div class="thumbnail" style="border: none;">
-              <img src="img/incubation/Powency_LOGO_ORG.png" alt="Lights" style="width:50%">
-            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
+            <img src="img/incubation/Powency_LOGO_ORG.png" alt="Lights" style="width:50%">
           </div>
         </div>
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="thumbnail" style="border: none;">
-              <img src="img/incubation/tinkertank_1.png" alt="Lights" style="width:50%">
-            </div>
+    </div>
+    <div class="container container-padding">
+      <div class="row">
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
+            <img src="img/incubation/tinkertank_1.png" alt="Lights" style="width:50%">
           </div>
-          <div class="col-md-4">
-            <div class="thumbnail" style="border: none;">
-              <img src="img/incubation/White Panda Icon Grey 2-02 (1).png" alt="Lights" style="width:50%">
-            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
+            <img src="img/incubation/White Panda Icon Grey 2-02 (1).png" alt="Lights" style="width:50%">
           </div>
-          <div class="col-md-4">
-            <div class="thumbnail" style="border: none;">
-              <img src="img/incubation/krisik.png" alt="Lights" style="width:50%">
-            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
+            <img src="img/incubation/krisik.png" alt="Lights" style="width:50%">
           </div>
-          <div class="col-md-4">
-            <div class="thumbnail" style="border: none;">
-              <img src="img/incubation/habitel-1.png" alt="Lights" style="width:50%">
-            </div>
+        </div>
+      </div>
+    </div>
+    <div class="container container-padding">
+      <div class="row">
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
+            <img src="img/incubation/habitel-1.png" alt="Lights" style="width:50%">
           </div>
         </div>
       </div>
@@ -473,139 +518,138 @@
         </div>
       </div>
     </div>
-  </div>
-  <!-- images-->
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="thumbnail" style="border: none;">
-          <img src="img/nidhi/E-Vega_logo.png" alt="Lights" style="width:50%">
+    <!-- images-->
+    <div class="container container-padding">
+      <div class="row">
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
+            <img src="img/nidhi/E-Vega_logo.png" alt="Lights" style="width:50%">
+          </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="thumbnail" style="border: none;">
-          <img src="img/nidhi/micobm.png" alt="Lights" style="width:40%">
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
+            <img src="img/nidhi/micobm.png" alt="Lights" style="width:40%">
+          </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="thumbnail" style="border: none;">
-          <img src="img/nidhi/Galanto.png" alt="Lights" style="width:50%">
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
+            <img src="img/nidhi/Galanto.png" alt="Lights" style="width:50%">
+          </div>
         </div>
-      </div>
 
+      </div>
+    </div>
+    <div class="container container-padding">
+      <div class="row">
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
+            <img src="img/nidhi/InfyU Lab.png" alt="Lights" style="width:50%">
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
+            <img src="img/nidhi/kalam.png" alt="Lights" style="width:50%">
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
+            <img src="img/nidhi/meiro.png" alt="Lights" style="width:50%">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container container-padding">
+      <div class="row">
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
+            <img src="img/nidhi/exposit.png" alt="Lights" style="width:50%">
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
+            <img src="img/nidhi/Shayonam.png" alt="Lights" style="width:50%">
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
+            <h3 style="width:50%; font-family: 'Raleway', sans-serif; margin: 5% 33%; font-size: 23px;">
+              Kairios Robotics</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container container-padding">
+      <div class="row">
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
+            <h3 style="width:50%; font-family: 'Raleway', sans-serif; margin: 5% 33%; font-size: 20px;">
+              Cellegant Energy</h3>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
+            <h3 style="width:50%; font-family: 'Raleway', sans-serif; margin: 5% 33%; font-size: 19px;">
+              MB2 Nanomaterials</h3>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
+            <h3 style="width:50%; font-family: 'Raleway', sans-serif; margin: 5% 33%; font-size: 20px;">
+              Golden Plastics</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container container-padding">
+      <div class="row">
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
+            <h3 style="width:50%; font-family: 'Raleway', sans-serif; margin: 5% 33%; font-size: 20px;">
+              WebNomics</h3>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
+            <h3 style="width:50%; font-family: 'Raleway', sans-serif; margin: 5% 33%; font-size: 20px;">
+              Team BD</h3>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
+            <h3 style="width:50%; font-family: 'Raleway', sans-serif; margin: 5% 33%; font-size: 20px;">
+              Tesseract Robotics</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container container-padding">
+      <div class="row">
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
+            <h3 style="width:50%; font-family: 'Raleway', sans-serif; margin: 5% 33%; font-size: 20px;">
+              SysIDEA Roboticss</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 20px">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="section-headline text-center" id="incubates">
+          <h3 style="font-size: 30px">Nidhi Seed Support</h3>
+        </div>
+      </div>
+    </div>
+    <!-- images-->
+    <div class="container container-padding" style="display: flex; align-items: center;justify-content: center">
+      <div class="row">
+        <div class="col-sm-4 col-md-4 marg">
+          <div class="thumbnail thumbnail-custom">
+            <img src="img/nidhi_seed/AiRTH_Logo.png" alt="Lights" style="width:50%">
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="container">
-    <div class="row">
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail" style="border: none;">
-        <img src="img/nidhi/InfyU Lab.png" alt="Lights" style="width:50%">
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail" style="border: none;">
-        <img src="img/nidhi/kalam.png" alt="Lights" style="width:50%">
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail" style="border: none;">
-        <img src="img/nidhi/meiro.png" alt="Lights" style="width:50%">
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="thumbnail" style="border: none;">
-          <img src="img/nidhi/exposit.png" alt="Lights" style="width:50%">
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="thumbnail" style="border: none;">
-          <img src="img/nidhi/Shayonam.png" alt="Lights" style="width:50%">
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="thumbnail" style="border: none;">
-          <h3 style="width:50%; font-family: 'Raleway', sans-serif; margin: 5% 33%; font-size: 23px;">
-            Kairios Robotics</h3>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="thumbnail" style="border: none;">
-          <h3 style="width:50%; font-family: 'Raleway', sans-serif; margin: 5% 33%; font-size: 20px;">
-            Cellegant Energy</h3>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="thumbnail" style="border: none;">
-          <h3 style="width:50%; font-family: 'Raleway', sans-serif; margin: 5% 33%; font-size: 19px;">
-            MB2 Nanomaterials</h3>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="thumbnail" style="border: none;">
-          <h3 style="width:50%; font-family: 'Raleway', sans-serif; margin: 5% 33%; font-size: 20px;">
-            Golden Plastics</h3>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="thumbnail" style="border: none;">
-          <h3 style="width:50%; font-family: 'Raleway', sans-serif; margin: 5% 33%; font-size: 20px;">
-            WebNomics</h3>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="thumbnail" style="border: none;">
-          <h3 style="width:50%; font-family: 'Raleway', sans-serif; margin: 5% 33%; font-size: 20px;">
-            Team BD</h3>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="thumbnail" style="border: none;">
-          <h3 style="width:50%; font-family: 'Raleway', sans-serif; margin: 5% 33%; font-size: 20px;">
-            Tesseract Robotics</h3>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="thumbnail" style="border: none;">
-          <h3 style="width:50%; font-family: 'Raleway', sans-serif; margin: 5% 33%; font-size: 20px;">
-            SysIDEA Roboticss</h3>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row" style="margin-top: 20px">
-    <div class="col-md-12 col-sm-12 col-xs-12">
-      <div class="section-headline text-center" id="incubates">
-        <h3 style="font-size: 30px">Nidhi Seed Support</h3>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- images-->
-<div class="container">
-  <div class="row">
-    <div class="col-md-4">
-      <div class="thumbnail" style="border: none;">
-        <img src="img/nidhi_seed/AiRTH_Logo.png" alt="Lights" style="width:50%">
-      </div>
-    </div>
-  </div>
-</div>
 
 
   <div class="clearfix"></div>
@@ -614,14 +658,14 @@
 
   <footer>
     <div class="footer-area">
-      <div class="container">
+      <div class="container container-padding">
         <div class="row">
           <div class="col-md-4 col-sm-4 col-xs-12">
             <div class="footer-content">
               <div class="footer-head">
                 <div class="footer-logo">
                   <!-- Adding logo -->
-                    <img src="img/eii-white-logo.png" alt="" style="width: 100px; height: 100px;">
+                  <img src="img/eii-white-logo.png" alt="" style="width: 100px; height: 100px;">
                 </div>
 
                 <p>IIT Gandhinagar<br>Palaj, Gandhinagar - 382355<br>Gujarat, India</p>
@@ -636,7 +680,7 @@
                 <h4>information</h4>
                 <div class="footer-contacts">
                   <p><span>Contact Us: </span>
-                    <p> Rupak Banerjee <br></p>
+                  <p> Rupak Banerjee <br></p>
                   </p>
                   <a href="mailto:rupak.banerjee@iitgn.ac.in">rupak.banerjee@iitgn.ac.in</a> <br> <br>
                   <p style="display: inline;"><span>Email Us: </span></p>
@@ -670,13 +714,13 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
   </footer>
 
   <div class="footer-area-bottom">
-    <div class="container">
+    <div class="container container-padding">
       <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
           <div class="footer-content text-center">
@@ -791,10 +835,10 @@
   <script src="js/main.js"></script>
 
   <!-- Javascript for navbar -->
-   <script src="js/navbar.js"></script>
+  <script src="js/navbar.js"></script>
 
-<!-- Javascript for slideshow -->
-<script src="js/slideshow.js"></script>
+  <!-- Javascript for slideshow -->
+  <script src="js/slideshow.js"></script>
 </body>
 
 </html>
