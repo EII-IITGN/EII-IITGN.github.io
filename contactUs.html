@@ -50,43 +50,81 @@
 
     <!-- Contact Us Form Styling -->
     <style>
-        .bodyContact {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
 
-        .containerContact {
-            width: 500px;
-            padding: 30px;
-            border: 1px solid #eeeeee;
-            border-radius: 10px;
-            background-color: #003b5b;
-        }
 
-        input {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-        }
 
+
+        input,
         textarea {
             width: 100%;
             padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        textarea {
+            resize: vertical;
         }
 
         #submit {
             border: none;
             background-color: orangered;
             color: white;
-            width: 200px;
+            width: 100%;
             margin-top: 10px;
             border-radius: 5px;
+            padding: 15px;
+            cursor: pointer;
         }
 
         #submit:hover {
             background-color: #333333;
+        }
+
+        /* Layout adjustments for the form and map container */
+        .containerForm {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 10vh;
+        }
+
+        .containerForm>div {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 768px) {
+            .containerForm {
+                padding: 20px;
+                flex-direction: column;
+            }
+
+            .containerForm>div {
+                width: 100%;
+            }
+
+            #submit {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .containerContact {
+                padding: 20px;
+            }
+
+            input,
+            textarea {
+                padding: 8px;
+            }
+
+            #submit {
+                padding: 12px;
+            }
         }
     </style>
 </head>
@@ -222,8 +260,8 @@
 
 
     <!-- Contact Us Form Section -->
-    <div class="container" style=" padding: 7vw; display: flex; justify-content: space-between;">
-        <div style="flex: 0 0 48%; padding-right: 20px;">
+    <div class="containerForm">
+        <div>
             <form method="post" id="contact-form">
                 <h4>Contact Us</h4>
                 <input type="text" name="your-name" placeholder="Name" required>
@@ -238,7 +276,7 @@
         </div>
 
         <!-- Google Map Section -->
-        <div style="flex: 0 0 48%; height: 400px; overflow: hidden; border: 1px solid #ccc; border-radius: 10px;">
+        <div style="min-height: 60vh; overflow: hidden; border: 1px solid #ccc; border-radius: 10px;">
             <iframe src="https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=IIT+Gandhinagar"
                 width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
             </iframe>
