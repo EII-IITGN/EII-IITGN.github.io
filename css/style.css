@@ -894,9 +894,20 @@ circle {
 ----------------------------------------*/
 /* Base style for the box */
 
-
+.department-container {
+  display: grid;
+  gap: 15px; /* Space between rows */
+  justify-content: center; /* Centers the entire grid */
+}
 
 .department-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Equal columns for alignment */
+  gap: 10px; /* Space between buttons */
+}
+
+
+.department-tabsv2 {
   display: flex;
   gap: 5rem;
   justify-content: center;
@@ -915,6 +926,39 @@ circle {
   font-size: medium;
   transition: background-color 0.3s ease;
 }
+
+/* Hover effect */
+.team-tab-button:hover {
+  background-color: #e2e6ea;
+}
+
+/* Small screens (e.g., phones) */
+@media (max-width: 576px) {
+  .team-tab-button {
+    padding: 8px 15px;
+    font-size: small;
+    border-radius: 3px;
+  }
+}
+
+/* Medium screens (e.g., tablets) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .team-tab-button {
+    padding: 10px 18px;
+    font-size: medium;
+    border-radius: 4px;
+  }
+}
+
+/* Large screens (e.g., desktops) */
+@media (min-width: 769px) {
+  .team-tab-button {
+    padding: 12px 25px;
+    font-size: large;
+    border-radius: 6px;
+  }
+}
+
 
 .team-tab-button.active-team-button{
   background-color: #d9e2fa;
